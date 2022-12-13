@@ -24,7 +24,10 @@
       ],
       "@utils/*":[
         "./src/utils/*"
-      ]
+      ],
+      "@fonts/*":[
+        "./src/fonts/*"
+      ],
     }
   }
 }
