@@ -1,17 +1,41 @@
-
 import styled from "styled-components/native";
 import theme from "@theme/index";
-export const ContainerMarvel = styled.View`
-flex: 0;
+import { Dimensions } from "react-native";
+
+const { width, height } = Dimensions.get("window");
+
+export const Container = styled.View`
+
 width: 100%;
+background-color: ${({theme}) => theme.COLORS.BLACK};
 align-items: center;
 justify-content: center;
-background-color: ${theme.COLORS.BLACK};
+`; 
+
+export const ContainerMarvel = styled.View`
+  align-items: center;
+  justify-content: center;
+  background-color: ${theme.COLORS.RED};
+  padding: 7px;
+  margin-bottom: 50px;
 `;
 
-export const Logo = styled.View`
+export const Logo = styled.Text`
+  font-family: ${({ theme }) => theme.FONT_FAMILY.MARVEL_REGULAR};
+  font-size: 70px;
+  color: #fff;
+`;
 
-height: 140px;
-width: 56px;
-background-color: ${theme.COLORS.RED}
+export const Title = styled.Text`
+font-family: ${({theme}) => theme.FONT_FAMILY.AXIFORMA_BOLD};
+font-size: 18px;
+color: #fff;
+margin-bottom: 10px;
+`;
+
+export const Subtitle = styled.Text`
+font-family: ${({theme}) => theme.FONT_FAMILY.AXIFORMA_LIGHT};
+font-size: 14px;
+color: #fff;
+margin-bottom: 10px;
 `;

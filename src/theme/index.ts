@@ -18,5 +18,4 @@ export default {
     MARVEL_REGULAR: "marvel-regular-DJ83",
    
   },
-  
-};
+} as const;
