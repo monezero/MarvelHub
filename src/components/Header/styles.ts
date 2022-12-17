@@ -5,7 +5,7 @@ import { Dimensions } from "react-native";
 const { width, height } = Dimensions.get("window");
 
 export const Container = styled.View`
-  width: 100%;
+  width: ${width * 0.7}px;
   background-color: ${({ theme }) => theme.COLORS.BLACK};
   align-items: center;
   justify-content: center;
@@ -16,7 +16,8 @@ export const ContainerMarvel = styled.View`
   justify-content: center;
   background-color: ${theme.COLORS.RED};
   padding: 7px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  ;
 `;
 
 export const Logo = styled.Text`
@@ -28,12 +29,17 @@ export const Title = styled.Text`
   font-family: ${({ theme }) => theme.FONT_FAMILY.AXIFORMA_BOLD};
   font-size: 18px;
   color: #fff;
-  margin-bottom: 10px;
+  margin-top: 40px;
+  text-align: center;
+  
+  
+  
 `;
 
 export const Subtitle = styled.Text`
   font-family: ${({ theme }) => theme.FONT_FAMILY.AXIFORMA_LIGHT};
   font-size: 14px;
   color: #fff;
-  margin-bottom: 10px;
+  padding: 18px;
+  
 `;

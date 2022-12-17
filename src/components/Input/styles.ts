@@ -6,7 +6,6 @@ import theme from "@theme/index";
 export const Container = styled.TextInput`
   ${({ theme }) => css`
     flex: 1;
-
     min-height: 56px;
     max-height: 56px;
     width: ${width * 0.7}px;
@@ -20,23 +19,15 @@ export const Container = styled.TextInput`
   `}
 `;
 
-export const Fixator = styled.View`
-flex-direction: row;
-padding-bottom: 50px;
 
-`;
 
 export const TextMain = styled.Text`
-
+flex-direction: row;
 color: ${theme.COLORS.WHITE};
 font-family: ${theme.FONT_FAMILY.CLARIKA_REGULAR};
 font-size: 16px;
+
+;
 `
 
-export const TextSecond = styled.Text`
-color: ${theme.COLORS.RED};
-font-family: ${theme.FONT_FAMILY.CLARIKA_REGULAR};
-font-size: 16px;
-margin-left: 6px;
 
-`;
