@@ -4,6 +4,13 @@ import { Dimensions } from "react-native";
 
 const { width, height } = Dimensions.get("window");
 
+export type  HeaderStyleProps = "PRIMARY" | "SECONDARY";
+
+type Props = {
+  type: HeaderStyleProps;
+}
+
+
 export const Container = styled.View`
   width: ${width * 0.7}px;
   background-color: ${({ theme }) => theme.COLORS.BLACK};
@@ -11,9 +18,11 @@ export const Container = styled.View`
   justify-content: center;
 `;
 
+
+
 export const ContainerMarvel = styled.View`
   align-items: center;
-  justify-content: center;
+  justify-content:  center;
   background-color: ${theme.COLORS.RED};
   padding: 7px;
   margin-top: 20px;

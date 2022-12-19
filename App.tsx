@@ -5,6 +5,8 @@ import { useFonts } from "expo-font";
 import { StatusBar } from "react-native";
 import { Loading } from "@components/Loading/index";
 import { Routes } from "@routes/index";
+import { Characters } from "@screens/Characters";
+
 export default function App() {
   const [fontsLoaded] = useFonts({
     "marvel-regular-DJ83": require("@fonts/marvel-regular-Dj83.ttf"),

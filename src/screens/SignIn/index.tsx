@@ -1,6 +1,3 @@
-import { StatusBar } from "expo-status-bar";
-import { Image, Animated } from "react-native";
-import { useFonts } from "expo-font";
 import { Container } from "./styles";
 import { Button } from "@components/Button";
 import { Input } from "@components/Input";
@@ -9,12 +6,17 @@ import LoginSVG from "@assets/ultimato_login.svg";
 import CheckBox from "@components/Checkbox";
 import { LinearGradient } from "expo-linear-gradient";
 import { TextMain } from "@components/Input/styles";
-import theme from "@theme/index";
 import { height, width } from "@utils/dimensions";
 import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
+import { AuthNavigatorRouteProps } from "@routes/auth.routes";
 
 export function SignIn() {
+  const navigation = useNavigation<AuthNavigatorRouteProps>();
+  function handleLogin() {
+    navigation.navigate("characters");
+  }
   return (
     <Container>
       <LoginSVG
@@ -41,7 +43,7 @@ export function SignIn() {
           <Input placeholder="E-mail" autoCorrect={false}></Input>
           <Input placeholder="Senha" autoCorrect={false}></Input>
           <View style={{ width: "100%", alignItems: "center" }}>
-            <Button title={"Entrar"} />
+            <Button title={"Entrar"} onPress={handleLogin} />
             <CheckBox />
             <TextMain>
               É novo(a) aqui?
