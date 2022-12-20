@@ -6,6 +6,7 @@ import { StatusBar } from "react-native";
 import { Loading } from "@components/Loading/index";
 import { Routes } from "@routes/index";
 import { Characters } from "@screens/Characters";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -21,13 +22,15 @@ export default function App() {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="transparent"
-        translucent
-      />
-      {fontsLoaded ? <Routes /> : <Loading />}
-    </ThemeProvider>
+    <NavigationContainer>
+      <ThemeProvider theme={theme}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
+        {fontsLoaded ? <Routes /> : <Loading />}
+      </ThemeProvider>
+    </NavigationContainer>
   );
 }

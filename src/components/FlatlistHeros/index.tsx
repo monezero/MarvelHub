@@ -25,6 +25,7 @@ export function FlatlistHeros() {
         borderRadius: 18,
         borderColor: "#ff0000",
         marginLeft: 10,
+        marginTop: 30,
       }}
     />
   );

@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import React from "react";
 import { View, Text } from "react-native";
 
-const Films = () => {
+export const Films = () => {
   return (
     <View>
       <Text>index</Text>

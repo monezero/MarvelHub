@@ -7,12 +7,23 @@ import {
   TextDescription,
   TextMini,
   TextCharacterName,
+  ViewContainerMarvel,
+  ViewLogoMarvel,
+  ViewTopChar,
+  ViewFlatlist,
+  ViewDescription,
+  ViewTextMini,
+  ViewApparitions,
+  ViewCharacters,
+  ViewCharactersBanner,
+  ViewCharactersName,
 } from "./styles";
+
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRouteProps } from "@routes/auth.routes";
 import { StatusBar, View } from "react-native";
-import { FlatlistHeros } from "@components/Flatlist";
+import { FlatlistHeros } from "@components/FlatlistHeros";
 import { CharactersBanner } from "@components/CharactersBanner";
 import { ImagesBanner } from "@components/ImagesBanner";
 export function Characters() {
