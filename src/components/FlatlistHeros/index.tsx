@@ -5,6 +5,7 @@ import {
   ListRenderItem,
   FlatList,
 } from "react-native";
+import { Container, FlatlistText } from "./styles";
 
 export function FlatlistHeros() {
   const [images, setImages] = useState<ImageSourcePropType[]>([
@@ -23,6 +24,8 @@ export function FlatlistHeros() {
         height: 200,
         width: 200,
         borderRadius: 18,
+        borderWidth: 1,
+        overflow: "hidden",
         borderColor: "#ff0000",
         marginLeft: 10,
         marginTop: 30,
@@ -37,7 +40,6 @@ export function FlatlistHeros() {
       renderItem={render_Item}
       style={{
         width: 300,
-
         borderColor: "#ff0000",
         borderRadius: 30,
       }}

@@ -1,3 +1,4 @@
+import React from "react";
 import {
   createNativeStackNavigator,
   NativeStackNavigationProp,
@@ -22,9 +23,6 @@ export function AuthRoutes() {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen name="signIn" component={SignIn} />
-      <Screen name="characters" component={Characters} />
-      <Screen name="comics" component={Comics} />
-      <Screen name="films" component={Films} />
     </Navigator>
   );
 }

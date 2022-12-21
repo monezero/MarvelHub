@@ -26,6 +26,7 @@ import { StatusBar, View } from "react-native";
 import { FlatlistHeros } from "@components/FlatlistHeros";
 import { CharactersBanner } from "@components/CharactersBanner";
 import { ImagesBanner } from "@components/ImagesBanner";
+import { AppRoutes } from "@routes/app.routes";
 export function Characters() {
   const navigation = useNavigation<AuthNavigatorRouteProps>();
   function handleLogout() {
@@ -73,6 +74,7 @@ export function Characters() {
           style={{
             alignItems: "center",
             width: "70%",
+            marginTop: 20,
           }}
         >
           <TextDescription>
@@ -90,7 +92,7 @@ export function Characters() {
         <View
           style={{
             marginLeft: 20,
-            marginTop: 30,
+            marginTop: 40,
           }}
         >
           <TextTitle>Aparições:</TextTitle>
