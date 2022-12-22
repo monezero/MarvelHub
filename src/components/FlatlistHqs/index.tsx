@@ -23,6 +23,8 @@ export function FlatlistHqs() {
         height: 200,
         width: 200,
         borderRadius: 18,
+        borderWidth: 1,
+        overflow: "hidden",
         borderColor: "#ff0000",
         marginLeft: 10,
         marginTop: 30,

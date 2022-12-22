@@ -9,15 +9,20 @@ export const Container = styled.View`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-   
-
 `;
 
-export const ApparitionsBanner = styled.Image`
- width: 55px;
- height: 55px;
- margin-left: 6px;
+export const ComicsBanner = styled.Image`
+ width: 140px;
+ height: 70px;
+ margin-left: 18px;
  border-radius: 12px;
  margin-top: 6px;
 
 `;
+
+
+
+
+
+
+

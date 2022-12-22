@@ -23,6 +23,8 @@ export function FlatlistMovies() {
         height: 200,
         width: 200,
         borderRadius: 18,
+        borderWidth: 1,
+        overflow: "hidden",
         borderColor: "#ff0000",
         marginLeft: 10,
         marginTop: 30,
@@ -37,7 +39,6 @@ export function FlatlistMovies() {
       renderItem={render_Item}
       style={{
         width: 300,
-
         borderColor: "#ff0000",
         borderRadius: 30,
       }}

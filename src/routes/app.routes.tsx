@@ -2,8 +2,8 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Characters } from "@screens/Characters";
+import { Films } from "@screens/Films";
 import { Comics } from "@screens/Comics";
-import Films from "@screens/Films";
 import { View, Text } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -72,8 +72,8 @@ export function AppRoutes() {
         }}
       />
       <Screen
-        name="comics"
-        component={Comics}
+        name="films"
+        component={Films}
         options={{
           tabBarIcon: ({ focused }) => (
             <View>
@@ -91,8 +91,8 @@ export function AppRoutes() {
         }}
       />
       <Screen
-        name="films"
-        component={Films}
+        name="comics"
+        component={Comics}
         options={{
           tabBarIcon: ({ focused }) => (
             <View>

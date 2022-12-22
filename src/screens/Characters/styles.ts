@@ -32,7 +32,7 @@ export const LogoMini = styled.Text`
 export const TextDescription = styled.Text`
  font-family: ${({theme}) => theme.FONT_FAMILY.AXIFORMA_THIN};
  font-size: 14px;
- color: ${({theme}) => theme.COLORS.WHITE}
+ color: ${({theme}) => theme.COLORS.WHITE};
 `;
 
 export const TextMini = styled.Text`

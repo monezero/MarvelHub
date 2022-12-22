@@ -1,6 +1,6 @@
 import { HeroesBanner, Container } from "./styles";
 
-export function CharactersBanner() {
+export function CharacterBanner() {
   return (
     <Container>
       <HeroesBanner source={require("@assets/characters1.png")} />

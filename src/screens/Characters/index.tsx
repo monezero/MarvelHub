@@ -24,8 +24,8 @@ import { useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRouteProps } from "@routes/auth.routes";
 import { StatusBar, View } from "react-native";
 import { FlatlistHeros } from "@components/FlatlistHeros";
-import { CharactersBanner } from "@components/CharactersBanner";
-import { ImagesBanner } from "@components/ImagesBanner";
+import { CharacterBanner } from "@components/BannerHeroes";
+import { ApparitionSquares } from "@components/SquareApparitions";
 import { AppRoutes } from "@routes/app.routes";
 export function Characters() {
   const navigation = useNavigation<AuthNavigatorRouteProps>();
@@ -73,7 +73,8 @@ export function Characters() {
         <View
           style={{
             alignItems: "center",
-            width: "70%",
+            justifyContent: "center",
+            maxWidth: "70%",
             marginTop: 20,
           }}
         >
@@ -96,7 +97,7 @@ export function Characters() {
           }}
         >
           <TextTitle>Aparições:</TextTitle>
-          <ImagesBanner />
+          <ApparitionSquares />
           <View
             style={{
               flexDirection: "row",
@@ -120,7 +121,7 @@ export function Characters() {
               marginTop: 30,
             }}
           >
-            <CharactersBanner />
+            <CharacterBanner />
           </View>
           <View
             style={{

@@ -24,8 +24,10 @@ import { useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRouteProps } from "@routes/auth.routes";
 import { StatusBar, View } from "react-native";
 import { FlatlistHeros } from "@components/FlatlistHeros";
-import { CharactersBanner } from "@components/CharactersBanner";
-import { ImagesBanner } from "@components/ImagesBanner";
+import { HqsBanner } from "@components/BannerHqs";
+import { AppRoutes } from "@routes/app.routes";
+import { CreatorsSquares } from "@components/SquareCreators";
+import { FlatlistHqs } from "@components/FlatlistHqs";
 export function Comics() {
   const navigation = useNavigation<AuthNavigatorRouteProps>();
   function handleLogout() {
@@ -59,7 +61,13 @@ export function Comics() {
             marginTop: 30,
           }}
         >
-          <TextTitle>Top 10 - HQs Populares</TextTitle>
+          <TextTitle
+            style={{
+              marginRight: 118,
+            }}
+          >
+            Top 10 - HQs Populares
+          </TextTitle>
         </View>
         <View
           style={{
@@ -67,12 +75,14 @@ export function Comics() {
             width: "50%",
           }}
         >
-          <FlatlistHeros />
+          <FlatlistHqs />
         </View>
         <View
           style={{
             alignItems: "center",
+            justifyContent: "center",
             width: "70%",
+            marginTop: 20,
           }}
         >
           <TextDescription>
@@ -89,49 +99,56 @@ export function Comics() {
         </View>
         <View
           style={{
-            marginLeft: 20,
-            marginTop: 30,
+            marginRight: 235,
+            marginTop: 40,
           }}
         >
           <TextTitle>Criadores:</TextTitle>
-          <ImagesBanner />
-          <View
-            style={{
-              flexDirection: "row",
-              width: "70%",
-              marginTop: 50,
-            }}
-          >
+        </View>
+        <View
+          style={{
+            marginRight: 180,
+          }}
+        >
+          <CreatorsSquares />
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+
+            marginTop: 50,
+          }}
+        >
+          <View style={{ flex: 1, marginLeft: 22 }}>
             <TextTitle>Quadrinhos</TextTitle>
-            <TextTitle
-              style={{
-                marginLeft: 85,
-              }}
-            >
-              + Ver todos
-            </TextTitle>
           </View>
-          <View
-            style={{
-              flexDirection: "row",
-              width: "100%",
-              marginTop: 30,
-            }}
-          >
-            <CharactersBanner />
+          <View style={{ marginRight: 43 }}>
+            <TextTitle>+ Ver todos</TextTitle>
           </View>
-          <View
-            style={{
-              flexDirection: "row",
-              padding: 25,
-              marginTop: 6,
-            }}
-          >
-            <TextCharacterName>Homem Aranha</TextCharacterName>
-            <TextCharacterName style={{ marginLeft: 105 }}>
-              Hulk
-            </TextCharacterName>
-          </View>
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            width: "70%",
+            marginTop: 30,
+          }}
+        >
+          <HqsBanner />
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            padding: 25,
+            marginTop: 6,
+          }}
+        >
+          <TextCharacterName style={{ flex: 1, marginLeft: 50 }}>
+            Em busca do poder
+          </TextCharacterName>
+          <TextCharacterName style={{ marginRight: 36 }}>
+            Wolverine - Origens
+          </TextCharacterName>
         </View>
       </Container>
     </SafeAreaView>

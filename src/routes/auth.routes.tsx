@@ -5,8 +5,6 @@ import {
 } from "@react-navigation/native-stack";
 import { SignIn } from "@screens/SignIn";
 import { Characters } from "@screens/Characters";
-import { Comics } from "@screens/Comics";
-import Films from "@screens/Films";
 
 type AuthRoutes = {
   signIn: undefined;
