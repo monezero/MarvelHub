@@ -7,6 +7,7 @@ import { Loading } from "@components/Loading/index";
 import { Routes } from "@routes/index";
 import { Characters } from "@screens/Characters";
 import { NavigationContainer } from "@react-navigation/native";
+import { AllCharacters } from "@screens/AllCharacters";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,7 +29,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Routes /> : <Loading />}
+      {fontsLoaded ? <AllCharacters /> : <Loading />}
     </ThemeProvider>
   );
 }
