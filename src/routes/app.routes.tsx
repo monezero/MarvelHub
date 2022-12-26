@@ -1,6 +1,9 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import {
+  createBottomTabNavigator,
+  BottomTabNavigationProp,
+} from "@react-navigation/bottom-tabs";
 import { Characters } from "@screens/Characters";
 import { Films } from "@screens/Films";
 import { Comics } from "@screens/Comics";
@@ -13,7 +16,9 @@ type AppRoutes = {
   films: undefined;
 };
 
-const { Navigator, Screen } = createBottomTabNavigator();
+export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
+
+const { Navigator, Screen } = createBottomTabNavigator<AppRoutes>();
 
 export function AppRoutes() {
   return (

@@ -34,7 +34,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <AuthRoutes /> : <Loading />}
+        {fontsLoaded ? <AppRoutes /> : <Loading />}
       </ThemeProvider>
     </NavigationContainer>
   );
