@@ -8,6 +8,10 @@ import { Routes } from "@routes/index";
 import { Characters } from "@screens/Characters";
 import { NavigationContainer } from "@react-navigation/native";
 import { AllCharacters } from "@screens/AllCharacters";
+import { AllComics } from "@screens/AllComics";
+import { AllMovies } from "@screens/AllMovies";
+import { AppRoutes } from "@routes/app.routes";
+import { AuthRoutes } from "@routes/auth.routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -23,13 +27,15 @@ export default function App() {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="transparent"
-        translucent
-      />
-      {fontsLoaded ? <AllCharacters /> : <Loading />}
-    </ThemeProvider>
+    <NavigationContainer>
+      <ThemeProvider theme={theme}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
+        {fontsLoaded ? <AuthRoutes /> : <Loading />}
+      </ThemeProvider>
+    </NavigationContainer>
   );
 }

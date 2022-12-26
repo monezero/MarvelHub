@@ -10,11 +10,11 @@ import {
 } from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
 
-export function CharacterContainer() {
+export function MoviesContainer() {
   return (
     <View>
       <Container>
-        <Image source={require("@assets/charactercontainer1.png")} />
+        <Image source={require("@assets/moviescontainer1.png")} />
         <ContainerVisual
           colors={["transparent", "#f00"]}
           start={{ x: 3, y: 3 }}
@@ -26,8 +26,8 @@ export function CharacterContainer() {
             marginTop: 170,
           }}
         >
-          Após ser mordido por uma aranha {"\n"} radioativa, Peter Parker se
-          torna {"\n"} o amigo da vizinhança, o Homem-{"\n"}Aranha
+          Tony Stark (Robert Downey Jr.) é{"\n"} um industrial bilionário, que
+          {"\n"} também é um brilhante inventor,{"\n"} ao ser sequestrado...
         </ContainerDescription>
         <ContainerDetails
           style={{
@@ -39,14 +39,14 @@ export function CharacterContainer() {
         </ContainerDetails>
         <ContainerTitle
           style={{
-            marginLeft: 60,
+            marginLeft: 56,
             marginTop: 140,
           }}
         >
-          Homem Aranha
+          Homem de Ferro
         </ContainerTitle>
 
-        <Image source={require("@assets/charactercontainer2.png")} />
+        <Image source={require("@assets/moviescontainer2.png")} />
         <ContainerVisual
           colors={["transparent", "#f00"]}
           start={{ x: 3, y: 3 }}
@@ -55,20 +55,20 @@ export function CharacterContainer() {
         ></ContainerVisual>
         <ContainerTitle
           style={{
-            marginLeft: 245,
+            marginLeft: 240,
             marginTop: 140,
           }}
         >
-          Wanda Waximoff
+          Homem de Ferro 2
         </ContainerTitle>
         <ContainerDescription
           style={{
-            marginLeft: 240,
+            marginLeft: 236,
             marginTop: 170,
           }}
         >
-          Wanda Maximoff foi sequestrada{"\n"} da Sérvia e trazida para a{"\n"}{" "}
-          Montanha Wundagore, base do{"\n"} Alto Evolucionário.{" "}
+          O mundo já sabe que o inventor{"\n"} bilionário Tony Stark (Robert
+          {"\n"} Downey Jr.) é o super-herói{"\n"} blindado Homem de Ferro....
         </ContainerDescription>
         <ContainerDetails
           style={{
@@ -80,7 +80,7 @@ export function CharacterContainer() {
         </ContainerDetails>
       </Container>
       <ContainerBottom>
-        <Image source={require("@assets/charactercontainer3.png")} />
+        <Image source={require("@assets/thor.png")} />
         <ContainerVisual
           colors={["transparent", "#f00"]}
           start={{ x: 3, y: 3 }}
@@ -91,11 +91,11 @@ export function CharacterContainer() {
         ></ContainerVisual>
         <ContainerTitle
           style={{
-            marginLeft: 90,
+            marginLeft: 94,
             marginTop: 140,
           }}
         >
-          Thanos
+          Thor
         </ContainerTitle>
         <ContainerDescription
           style={{
@@ -103,9 +103,9 @@ export function CharacterContainer() {
             marginTop: 170,
           }}
         >
-          A lua Titã era governada por{"\n"} Mentor (A'Lars), quando então{"\n"}{" "}
-          reinava paz e tecnologia. Mentor{"\n"} tinha dois filhos: Eros e
-          Thanos.{" "}
+          Quando é banido do reino de{"\n"} Asgard e exilado na Terra, o{"\n"}{" "}
+          arrogante guerreiro Thor (Chris{"\n"} Hemsworth) é obrigado a lutar
+          {"\n"} para reaver seus poderes perdidos.
         </ContainerDescription>
         <ContainerDetails
           style={{
@@ -115,7 +115,7 @@ export function CharacterContainer() {
         >
           Ver detalhes
         </ContainerDetails>
-        <Image source={require("@assets/charactercontainer4.png")} />
+        <Image source={require("@assets/captain_america.png")} />
         <ContainerVisual
           colors={["transparent", "#f00"]}
           start={{ x: 3, y: 3 }}
@@ -123,12 +123,13 @@ export function CharacterContainer() {
           style={{ marginLeft: 220 }}
         ></ContainerVisual>
 
-        <ContainerTitle style={{ marginLeft: 286, marginTop: 150 }}>
-          Hulk
+        <ContainerTitle style={{ marginLeft: 246, marginTop: 142 }}>
+          Capitão America
         </ContainerTitle>
         <ContainerDescription style={{ marginLeft: 236, marginTop: 172 }}>
-          Na história original dos{"\n"} quadrinhos, o Hulk é um selvagem{"\n"}{" "}
-          e poderoso alter ego do Dr. Robert{"\n"} Bruce Banner.
+          Em Capitão América: O Primeiro{"\n"} Vingador, conhecemos a história
+          {"\n"} de Steve Rogers (Chris Evans) e{"\n"} como ele se tornou o
+          melhor{"\n"} soldado do mundo.
         </ContainerDescription>
         <ContainerDetails style={{ marginLeft: 260, marginTop: 218 }}>
           Ver detalhes

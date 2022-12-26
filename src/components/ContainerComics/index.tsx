@@ -10,11 +10,11 @@ import {
 } from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
 
-export function CharacterContainer() {
+export function ComicsContainer() {
   return (
     <View>
       <Container>
-        <Image source={require("@assets/charactercontainer1.png")} />
+        <Image source={require("@assets/comicscontainer.png")} />
         <ContainerVisual
           colors={["transparent", "#f00"]}
           start={{ x: 3, y: 3 }}
@@ -26,8 +26,8 @@ export function CharacterContainer() {
             marginTop: 170,
           }}
         >
-          Após ser mordido por uma aranha {"\n"} radioativa, Peter Parker se
-          torna {"\n"} o amigo da vizinhança, o Homem-{"\n"}Aranha
+          O único oponente do Devorador{"\n"} de Mundos é o herói que ele{"\n"}{" "}
+          aprisionou na Terra: o Surfista{"\n"} Prateado.
         </ContainerDescription>
         <ContainerDetails
           style={{
@@ -39,14 +39,14 @@ export function CharacterContainer() {
         </ContainerDetails>
         <ContainerTitle
           style={{
-            marginLeft: 60,
+            marginLeft: 80,
             marginTop: 140,
           }}
         >
-          Homem Aranha
+          Parábola
         </ContainerTitle>
 
-        <Image source={require("@assets/charactercontainer2.png")} />
+        <Image source={require("@assets/comicscontainer2.png")} />
         <ContainerVisual
           colors={["transparent", "#f00"]}
           start={{ x: 3, y: 3 }}
@@ -55,20 +55,20 @@ export function CharacterContainer() {
         ></ContainerVisual>
         <ContainerTitle
           style={{
-            marginLeft: 245,
+            marginLeft: 240,
             marginTop: 140,
           }}
         >
-          Wanda Waximoff
+          Wolverine - Origem
         </ContainerTitle>
         <ContainerDescription
           style={{
-            marginLeft: 240,
+            marginLeft: 228,
             marginTop: 170,
           }}
         >
-          Wanda Maximoff foi sequestrada{"\n"} da Sérvia e trazida para a{"\n"}{" "}
-          Montanha Wundagore, base do{"\n"} Alto Evolucionário.{" "}
+          Origem é uma minissérie em{"\n"} quadrinhos publicada pela Marvel
+          {"\n"} Comics em seis edições, entre 2001{"\n"} e 2002
         </ContainerDescription>
         <ContainerDetails
           style={{
@@ -80,7 +80,7 @@ export function CharacterContainer() {
         </ContainerDetails>
       </Container>
       <ContainerBottom>
-        <Image source={require("@assets/charactercontainer3.png")} />
+        <Image source={require("@assets/hqs3.png")} />
         <ContainerVisual
           colors={["transparent", "#f00"]}
           start={{ x: 3, y: 3 }}
@@ -91,11 +91,11 @@ export function CharacterContainer() {
         ></ContainerVisual>
         <ContainerTitle
           style={{
-            marginLeft: 90,
+            marginLeft: 60,
             marginTop: 140,
           }}
         >
-          Thanos
+          Thor - Vikings
         </ContainerTitle>
         <ContainerDescription
           style={{
@@ -103,9 +103,8 @@ export function CharacterContainer() {
             marginTop: 170,
           }}
         >
-          A lua Titã era governada por{"\n"} Mentor (A'Lars), quando então{"\n"}{" "}
-          reinava paz e tecnologia. Mentor{"\n"} tinha dois filhos: Eros e
-          Thanos.{" "}
+          Garth Ennis e sua violência{"\n"} atacam novamente na HQ que{"\n"}{" "}
+          leva a violência das histórias de{"\n"} Thor ao limite!
         </ContainerDescription>
         <ContainerDetails
           style={{
@@ -115,7 +114,7 @@ export function CharacterContainer() {
         >
           Ver detalhes
         </ContainerDetails>
-        <Image source={require("@assets/charactercontainer4.png")} />
+        <Image source={require("@assets/comicscontainer4.png")} />
         <ContainerVisual
           colors={["transparent", "#f00"]}
           start={{ x: 3, y: 3 }}
@@ -123,12 +122,13 @@ export function CharacterContainer() {
           style={{ marginLeft: 220 }}
         ></ContainerVisual>
 
-        <ContainerTitle style={{ marginLeft: 286, marginTop: 150 }}>
-          Hulk
+        <ContainerTitle style={{ marginLeft: 246, marginTop: 142 }}>
+          Em Busca do Poder
         </ContainerTitle>
         <ContainerDescription style={{ marginLeft: 236, marginTop: 172 }}>
-          Na história original dos{"\n"} quadrinhos, o Hulk é um selvagem{"\n"}{" "}
-          e poderoso alter ego do Dr. Robert{"\n"} Bruce Banner.
+          Para satisfazer os desejos de sua{"\n"} amada Morte e provar o seu
+          amor,{"\n"} Thanos vai em busca das 6 joias{"\n"} do infinito a fim de
+          matar metade{"\n"} da humanidade.
         </ContainerDescription>
         <ContainerDetails style={{ marginLeft: 260, marginTop: 218 }}>
           Ver detalhes
