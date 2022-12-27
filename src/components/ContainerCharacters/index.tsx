@@ -7,10 +7,44 @@ import {
   ContainerVisual,
   ContainerDescription,
   ContainerDetails,
+  ImageSeeDetails,
+  ContainerSeeDetails,
+  Container1,
+  TitleSeeDetails,
+  ApparitionsSeeDetails,
+  ApparitionsMoviesSeeDetails,
+  RatingsSeeDetails,
 } from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
+import { useState } from "react";
 
 export function CharacterContainer() {
+  const [isDetails, setisDetails] = useState(false);
+  function Details() {
+    return (
+      <Container1>
+        <ImageSeeDetails source={require("@assets/charactercontainer1.png")} />
+        <ContainerSeeDetails colors={["#f00", "#800000"]}></ContainerSeeDetails>
+        <TitleSeeDetails>Homem Aranha</TitleSeeDetails>
+        <ApparitionsSeeDetails>Aparições</ApparitionsSeeDetails>
+        <ApparitionsMoviesSeeDetails>
+          Homem-Aranha 1{"\n"}
+          Homem-Aranha 2 {"\n"}
+          Homem Aranha 3 {"\n"}
+          Espetacular Homem-Aranha 1{"\n"}
+          Espetacular Homem-Aranha 2{"\n"}
+          Capitão-América: Guerra Civil{"\n"}
+          Homem-Aranha no AranhaVerso{"\n"}
+          Homem-Aranha - Homecoming{"\n"}
+          Vingadores - Guerra Infinita{"\n"}
+          Vingadores - Ultimato{"\n"}
+          Homem-Aranha - Far from home{"\n"}
+        </ApparitionsMoviesSeeDetails>
+        <RatingsSeeDetails>Avaliações de Fãs</RatingsSeeDetails>
+      </Container1>
+    );
+  }
+
   return (
     <View>
       <Container>
@@ -34,6 +68,7 @@ export function CharacterContainer() {
             marginLeft: 70,
             marginTop: 220,
           }}
+          onPress={Details}
         >
           Ver detalhes
         </ContainerDetails>

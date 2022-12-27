@@ -52,7 +52,60 @@ font-family: ${theme.FONT_FAMILY.AXIFORMA_THIN};
 font-size: 12px;
 position: absolute;
 color: ${theme.COLORS.WHITE};
-
-
-
 `;
+
+export const ImageSeeDetails = styled.Image`
+justify-content: center;
+align-items: center;
+width: 320px;
+height: 488px;
+border-radius: 30px;
+`;
+
+export const ContainerSeeDetails = styled(LinearGradient)`
+justify-content: center;
+align-items: center;
+width: 320px;
+height: 488px;
+border-radius: 30px;
+position: absolute;
+`
+
+export const Container1 = styled.View`
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%
+`;
+
+export const TitleSeeDetails = styled.Text`
+font-family: ${theme.FONT_FAMILY.AXIFORMA_BOLD};
+font-size: 20px;
+color: ${theme.COLORS.WHITE};
+margin-top: 30px;
+margin-right: 10px;
+`;
+
+export const ApparitionsSeeDetails = styled.Text`
+font-family: ${theme.FONT_FAMILY.AXIFORMA_BOLD};
+font-size: 16px;
+color: ${theme.COLORS.WHITE};
+margin-top: 10px;
+margin-right: 10px;
+`;
+
+export const ApparitionsMoviesSeeDetails = styled.Text`
+font-family: ${theme.FONT_FAMILY.AXIFORMA_THIN};
+font-size: 16px;
+color: ${theme.COLORS.WHITE};
+margin-top: 4px;
+margin-right: 10px;
+`;
+
+export const RatingsSeeDetails = styled.Text`
+font-family: ${theme.FONT_FAMILY.AXIFORMA_REGULAR};
+font-size: 18px;
+color: ${theme.COLORS.WHITE};
+margin-top: 10px;
+margin-right: 10px;
+`
