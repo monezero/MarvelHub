@@ -63,9 +63,8 @@ border-radius: 30px;
 `;
 
 export const ContainerSeeDetails = styled(LinearGradient)`
-justify-content: center;
-align-items: center;
-width: 320px;
+margin-top: 100px;
+width: 310px;
 height: 488px;
 border-radius: 30px;
 position: absolute;
