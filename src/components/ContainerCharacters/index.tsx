@@ -19,7 +19,7 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
 import { Feather } from "@expo/vector-icons";
-
+import { FontAwesome } from "@expo/vector-icons";
 export function CharacterContainer() {
   const [isDetails, setisDetails] = useState(false);
 
@@ -135,22 +135,62 @@ const Details = (props: Props) => {
           }}
         />
         <RatingsSeeDetails>Avaliações dos Fãs</RatingsSeeDetails>
+        <FontAwesome
+          name="star"
+          size={24}
+          color="orange"
+          style={{
+            marginTop: 420,
+            marginLeft: 30,
+            position: "absolute",
+            zIndex: 5,
+          }}
+        />
+        <FontAwesome
+          name="star"
+          size={24}
+          color="orange"
+          style={{
+            marginTop: 420,
+            marginLeft: 60,
+            position: "absolute",
+            zIndex: 5,
+          }}
+        />
+        <FontAwesome
+          name="star"
+          size={24}
+          color="orange"
+          style={{
+            marginTop: 420,
+            marginLeft: 90,
+            position: "absolute",
+            zIndex: 5,
+          }}
+        />
+        <FontAwesome
+          name="star"
+          size={24}
+          color="orange"
+          style={{
+            marginTop: 420,
+            marginLeft: 120,
+            position: "absolute",
+            zIndex: 5,
+          }}
+        />
+        <FontAwesome
+          name="star"
+          size={24}
+          color="gray"
+          style={{
+            marginTop: 420,
+            marginLeft: 150,
+            position: "absolute",
+            zIndex: 5,
+          }}
+        />
       </ContainerSeeDetails>
-      {/* 
-      
-      <ApparitionsMoviesSeeDetails>
-        Homem-Aranha 1{"\n"}
-        Homem-Aranha 2 {"\n"}
-        Homem Aranha 3 {"\n"}
-        Espetacular Homem-Aranha 1{"\n"}
-        Espetacular Homem-Aranha 2{"\n"}
-        Capitão-América: Guerra Civil{"\n"}
-        Homem-Aranha no AranhaVerso{"\n"}
-        Homem-Aranha - Homecoming{"\n"}
-        Vingadores - Guerra Infinita{"\n"}
-        Vingadores - Ultimato{"\n"}
-        Homem-Aranha - Far from home{"\n"}
-      </ApparitionsMoviesSeeDetails> */}
     </Container1>
   );
 };
