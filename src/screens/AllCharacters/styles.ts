@@ -37,4 +37,40 @@ export const Circle = styled.View`
   width: 25px;
   background-color: #bbb;
   border-radius: 12,5px;
+`;
+
+export const ContainerMenu = styled.View`
+height: 100%;
+width: 100%;
+justify-content: start;
+`;
+
+export const ContainerMenuVisual = styled.View`
+position: absolute;
+height: 400px;
+width: 400px;
+background-color: ${theme.COLORS.BLACK};
+border-radius: 18px ;
+overflow: hidden;
+border-color: ${theme.COLORS.RED};
+z-index: 1;
+`;
+
+export const ImageMenu = styled.Image`
+position: absolute;
+height: 80px;
+width: 80px;
+border-radius: 100px;
+border-color: ${theme.COLORS.RED};
+overflow: hidden;
+z-index: 3;
 `
+
+export const TextMenu = styled.Text`
+font-family: ${theme.FONT_FAMILY.AXIFORMA_REGULAR};
+font-size: 17px;
+line-height: 30px;
+color: ${theme.COLORS.RED};
+position: absolute;
+z-index: 2;
+`;

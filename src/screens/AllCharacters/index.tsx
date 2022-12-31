@@ -1,4 +1,13 @@
-import { ContainerMarvelMini, Container, TextTitle, LogoMini } from "./styles";
+import {
+  ContainerMarvelMini,
+  Container,
+  TextTitle,
+  LogoMini,
+  ContainerMenu,
+  ContainerMenuVisual,
+  ImageMenu,
+  TextMenu,
+} from "./styles";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
@@ -7,8 +16,10 @@ import { Entypo } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View } from "react-native";
 import { CharacterContainer } from "@components/ContainerCharacters";
+import { useState } from "react";
 
 export function AllCharacters() {
+  const [isMenu, setIsMenu] = useState(false);
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
       <View
@@ -18,7 +29,14 @@ export function AllCharacters() {
           flexDirection: "row",
         }}
       >
-        <Ionicons name="menu" size={36} color="red" />
+        <Ionicons
+          name="menu"
+          size={36}
+          color="red"
+          onPress={() => {
+            setIsMenu(true);
+          }}
+        />
 
         <View
           style={{

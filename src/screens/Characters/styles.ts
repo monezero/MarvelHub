@@ -108,3 +108,45 @@ padding: 25px;
 margin-top: 6px;
 
 `;
+
+export const ContainerMenu = styled.View`
+height: 100%;
+width: 100%;
+flex-direction: column;
+`;
+
+export const ContainerMenuVisual = styled.View`
+
+right: 300px;
+position: absolute;
+height: 220px;
+width: 160px;
+background-color: ${theme.COLORS.BLACK};
+border-width: 2px;
+border-radius: 30px ;
+overflow: hidden;
+border-color: ${theme.COLORS.RED};
+z-index: 1;
+`;
+
+export const ImageMenu = styled.Image`
+position: absolute;
+height: 60px;
+width: 60px;
+border-radius: 1px;
+border-width: 1px;
+border-color: ${theme.COLORS.RED};
+overflow: hidden;
+z-index: 3;
+`
+
+export const TextMenu = styled.Text`
+margin-left: 10px;
+margin-top: 60px;
+font-family: ${theme.FONT_FAMILY.AXIFORMA_REGULAR};
+font-size: 17px;
+line-height: 30px;
+color: ${theme.COLORS.RED};
+position: relative;
+z-index: 2;
+`;

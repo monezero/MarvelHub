@@ -30,9 +30,9 @@ import { CreatorsSquares } from "@components/SquareCreators";
 import { FlatlistHqs } from "@components/FlatlistHqs";
 export function Comics() {
   const navigation = useNavigation<AuthNavigatorRouteProps>();
-  function handleLogout() {
-    navigation.navigate("signIn");
-  }
+  // function handleLogout() {
+  //   navigation.navigate("signIn");
+  // }
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
       <View
@@ -42,7 +42,7 @@ export function Comics() {
           flexDirection: "row",
         }}
       >
-        <Ionicons name="menu" size={36} color="red" onPress={handleLogout} />
+        <Ionicons name="menu" size={36} color="red" />
 
         <View
           style={{

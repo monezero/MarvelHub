@@ -17,6 +17,10 @@ import {
   ViewCharacters,
   ViewCharactersBanner,
   ViewCharactersName,
+  ContainerMenu,
+  ContainerMenuVisual,
+  ImageMenu,
+  TextMenu,
 } from "./styles";
 
 import { Ionicons } from "@expo/vector-icons";
@@ -27,11 +31,13 @@ import { FlatlistHeros } from "@components/FlatlistHeros";
 import { CharacterBanner } from "@components/BannerHeroes";
 import { ApparitionSquares } from "@components/SquareApparitions";
 import { AppRoutes } from "@routes/app.routes";
+import { useState } from "react";
 export function Characters() {
+  const [isMenu, setIsMenu] = useState(false);
   const navigation = useNavigation<AuthNavigatorRouteProps>();
-  function handleLogout() {
-    navigation.navigate("signIn");
-  }
+  // function handleLogout() {
+  //   navigation.navigate("signIn");
+  // }
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
       <View
@@ -41,8 +47,15 @@ export function Characters() {
           flexDirection: "row",
         }}
       >
-        <Ionicons name="menu" size={36} color="red" onPress={handleLogout} />
-
+        <Ionicons
+          name="menu"
+          size={36}
+          color="red"
+          onPress={() => {
+            setIsMenu(true);
+          }}
+        />
+        {isMenu && <Menu onPress={() => setIsMenu(false)} />}
         <View
           style={{
             marginLeft: 250,
@@ -140,3 +153,21 @@ export function Characters() {
     </SafeAreaView>
   );
 }
+
+interface Props {
+  onPress: () => void;
+}
+
+const Menu = (props: Props) => {
+  return (
+    <ContainerMenu>
+      <ContainerMenuVisual>
+        <ImageMenu source={require("@assets/profile.png")} />
+        <TextMenu>Perfil</TextMenu>
+        <TextMenu style={{ marginTop: 4 }}>Configurações</TextMenu>
+        <TextMenu style={{ marginTop: 2 }}>Visite nosso site</TextMenu>
+        <TextMenu style={{ marginTop: 0 }}>Sair</TextMenu>
+      </ContainerMenuVisual>
+    </ContainerMenu>
+  );
+};

@@ -31,9 +31,9 @@ import { FlatlistMovies } from "@components/FlatlistMovies";
 import { CharactersSquares } from "@components/SquareCharacters";
 export function Films() {
   const navigation = useNavigation<AuthNavigatorRouteProps>();
-  function handleLogout() {
-    navigation.navigate("signIn");
-  }
+  // function handleLogout() {
+  //   navigation.navigate("signIn");
+  // }
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
       <View
@@ -43,7 +43,7 @@ export function Films() {
           flexDirection: "row",
         }}
       >
-        <Ionicons name="menu" size={36} color="red" onPress={handleLogout} />
+        <Ionicons name="menu" size={36} color="red" />
 
         <View
           style={{

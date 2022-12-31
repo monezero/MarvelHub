@@ -34,7 +34,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <AllMovies /> : <Loading />}
+        {fontsLoaded ? <AppRoutes /> : <Loading />}
       </ThemeProvider>
     </NavigationContainer>
   );
