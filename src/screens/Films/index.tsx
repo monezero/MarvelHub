@@ -17,6 +17,10 @@ import {
   ViewCharacters,
   ViewCharactersBanner,
   ViewCharactersName,
+  ContainerMenu,
+  ContainerMenuVisual,
+  ImageMenu,
+  TextMenu,
 } from "./styles";
 
 import { Ionicons } from "@expo/vector-icons";
@@ -29,11 +33,16 @@ import { ApparitionSquares } from "@components/SquareApparitions";
 import { AppRoutes } from "@routes/app.routes";
 import { FlatlistMovies } from "@components/FlatlistMovies";
 import { CharactersSquares } from "@components/SquareCharacters";
+import { useState } from "react";
 export function Films() {
+  const [isMenu, setIsMenu] = useState(false);
   const navigation = useNavigation<AuthNavigatorRouteProps>();
-  // function handleLogout() {
-  //   navigation.navigate("signIn");
-  // }
+  function handleLogout() {
+    navigation.navigate("signIn");
+  }
+  function handleSeeAll() {
+    navigation.navigate("allMovies");
+  }
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
       <View
@@ -43,7 +52,20 @@ export function Films() {
           flexDirection: "row",
         }}
       >
-        <Ionicons name="menu" size={36} color="red" />
+        <Ionicons
+          name="menu"
+          size={36}
+          color="red"
+          onPress={() => {
+            setIsMenu(true);
+          }}
+        />
+        {isMenu && (
+          <Menu
+            onPressLogout={() => navigation.navigate("signIn")}
+            onPress={() => setIsMenu(false)}
+          />
+        )}
 
         <View
           style={{
@@ -136,6 +158,7 @@ export function Films() {
               style={{
                 marginLeft: 145,
               }}
+              onPress={handleSeeAll}
             >
               + Ver todos
             </TextTitle>
@@ -168,3 +191,26 @@ export function Films() {
     </SafeAreaView>
   );
 }
+
+interface Props {
+  onPress: () => void;
+  onPressLogout: () => void;
+}
+
+const Menu = (props: Props) => {
+  return (
+    <ContainerMenu>
+      <ContainerMenuVisual>
+        <ImageMenu source={require("@assets/profile.png")} />
+        <TextMenu>Perfil</TextMenu>
+        <TextMenu style={{ marginTop: 4 }}>Configurações</TextMenu>
+        <TextMenu style={{ marginTop: 2 }}>Visite nosso site</TextMenu>
+        <TextMenu style={{ marginTop: 0 }} onPress={props.onPressLogout}>
+          Sair
+        </TextMenu>
+      </ContainerMenuVisual>
+    </ContainerMenu>
+  );
+};
+
+export default Films;

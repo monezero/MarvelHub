@@ -24,6 +24,7 @@ export const ContainerMarvelMini = styled.View`
 `;
 
 export const LogoMini = styled.Text`
+  
   font-family: ${({ theme }) => theme.FONT_FAMILY.MARVEL_REGULAR};
   font-size: 30px;
   color: ${({theme}) => theme.COLORS.WHITE};
@@ -133,8 +134,7 @@ export const ImageMenu = styled.Image`
 position: absolute;
 height: 60px;
 width: 60px;
-border-radius: 1px;
-border-width: 1px;
+border-image: 30px;
 border-color: ${theme.COLORS.RED};
 overflow: hidden;
 z-index: 3;

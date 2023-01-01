@@ -58,9 +58,9 @@ z-index: 1;
 
 export const ImageMenu = styled.Image`
 position: absolute;
-height: 80px;
-width: 80px;
-border-radius: 100px;
+height: 60px;
+width: 60px;
+border-image: 30px;
 border-color: ${theme.COLORS.RED};
 overflow: hidden;
 z-index: 3;

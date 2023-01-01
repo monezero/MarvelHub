@@ -20,7 +20,19 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
 import { Feather } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import { AuthNavigatorRouteProps } from "@routes/auth.routes";
+import {
+  createNavigationContainerRef,
+  useNavigation,
+} from "@react-navigation/native";
 export function CharacterContainer() {
+  const navigation = useNavigation<AuthNavigatorRouteProps>();
+  function handleLogout() {
+    navigation.navigate("signIn");
+  }
+  function handleReturnX() {
+    navigation.navigate("allComics");
+  }
   const [isDetails, setisDetails] = useState(false);
 
   return (
@@ -128,11 +140,12 @@ const Details = (props: Props) => {
           size={30}
           color="white"
           style={{
-            marginTop: 420,
+            marginTop: 440,
             marginLeft: 300,
             position: "absolute",
             zIndex: 5,
           }}
+          onPress={props.onPress}
         />
         <RatingsSeeDetails>Avaliações dos Fãs</RatingsSeeDetails>
         <FontAwesome
@@ -140,7 +153,7 @@ const Details = (props: Props) => {
           size={24}
           color="orange"
           style={{
-            marginTop: 420,
+            marginTop: 440,
             marginLeft: 30,
             position: "absolute",
             zIndex: 5,
@@ -151,7 +164,7 @@ const Details = (props: Props) => {
           size={24}
           color="orange"
           style={{
-            marginTop: 420,
+            marginTop: 440,
             marginLeft: 60,
             position: "absolute",
             zIndex: 5,
@@ -162,7 +175,7 @@ const Details = (props: Props) => {
           size={24}
           color="orange"
           style={{
-            marginTop: 420,
+            marginTop: 440,
             marginLeft: 90,
             position: "absolute",
             zIndex: 5,
@@ -173,7 +186,7 @@ const Details = (props: Props) => {
           size={24}
           color="orange"
           style={{
-            marginTop: 420,
+            marginTop: 440,
             marginLeft: 120,
             position: "absolute",
             zIndex: 5,
@@ -184,7 +197,7 @@ const Details = (props: Props) => {
           size={24}
           color="gray"
           style={{
-            marginTop: 420,
+            marginTop: 440,
             marginLeft: 150,
             position: "absolute",
             zIndex: 5,

@@ -121,11 +121,12 @@ const Details = (props: Props) => {
           size={30}
           color="white"
           style={{
-            marginTop: 420,
+            marginTop: 440,
             marginLeft: 300,
             position: "absolute",
             zIndex: 5,
           }}
+          onPress={props.onPress}
         />
         <BuySeeDetails>Disponível para compra</BuySeeDetails>
         <BuyIconSeeDetails

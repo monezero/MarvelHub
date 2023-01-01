@@ -17,8 +17,17 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { View } from "react-native";
 import { CharacterContainer } from "@components/ContainerCharacters";
 import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { AuthNavigatorRouteProps } from "@routes/auth.routes";
 
 export function AllCharacters() {
+  const navigation = useNavigation<AuthNavigatorRouteProps>();
+  function handleLogout() {
+    navigation.navigate("signIn");
+  }
+  function handleReturn() {
+    navigation.navigate("login");
+  }
   const [isMenu, setIsMenu] = useState(false);
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
@@ -37,6 +46,12 @@ export function AllCharacters() {
             setIsMenu(true);
           }}
         />
+        {isMenu && (
+          <Menu
+            onPressLogout={() => navigation.navigate("signIn")}
+            onPress={() => setIsMenu(false)}
+          />
+        )}
 
         <View
           style={{
@@ -56,7 +71,12 @@ export function AllCharacters() {
           marginLeft: 25,
         }}
       >
-        <AntDesign name="arrowleft" size={30} color="#f00" />
+        <AntDesign
+          name="arrowleft"
+          size={30}
+          color="#f00"
+          onPress={handleReturn}
+        />
         <MaterialIcons name="people-alt" size={30} color="#f00" />
         <TextTitle>Personagens</TextTitle>
       </View>
@@ -73,3 +93,26 @@ export function AllCharacters() {
     </SafeAreaView>
   );
 }
+
+interface Props {
+  onPress: () => void;
+  onPressLogout: () => void;
+}
+
+const Menu = (props: Props) => {
+  return (
+    <ContainerMenu>
+      <ContainerMenuVisual>
+        <ImageMenu source={require("@assets/profile.png")} />
+        <TextMenu>Perfil</TextMenu>
+        <TextMenu style={{ marginTop: 4 }}>Configurações</TextMenu>
+        <TextMenu style={{ marginTop: 2 }}>Visite nosso site</TextMenu>
+        <TextMenu style={{ marginTop: 0 }} onPress={props.onPressLogout}>
+          Sair
+        </TextMenu>
+      </ContainerMenuVisual>
+    </ContainerMenu>
+  );
+};
+
+export default AllCharacters;

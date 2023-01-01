@@ -128,6 +128,7 @@ const Details = (props: Props) => {
             position: "absolute",
             zIndex: 5,
           }}
+          onPress={props.onPress}
         />
         <BuySeeDetails>Disponível para compra</BuySeeDetails>
         <BuyIconSeeDetails

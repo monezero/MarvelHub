@@ -38,6 +38,7 @@ export function AppRoutes() {
           marginRight: 250,
           elevation: 0,
           borderColor: "#000",
+          shadowColor: "transparent",
           backgroundColor: "#f00",
           borderRadius: 30,
           borderWidth: 3,

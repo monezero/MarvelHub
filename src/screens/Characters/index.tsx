@@ -33,11 +33,16 @@ import { ApparitionSquares } from "@components/SquareApparitions";
 import { AppRoutes } from "@routes/app.routes";
 import { useState } from "react";
 export function Characters() {
-  const [isMenu, setIsMenu] = useState(false);
   const navigation = useNavigation<AuthNavigatorRouteProps>();
-  // function handleLogout() {
-  //   navigation.navigate("signIn");
-  // }
+  function handleLogout() {
+    navigation.navigate("signIn");
+  }
+  function handleSeeAll() {
+    navigation.navigate("allCharacters");
+  }
+
+  const [isMenu, setIsMenu] = useState(false);
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
       <View
@@ -55,7 +60,13 @@ export function Characters() {
             setIsMenu(true);
           }}
         />
-        {isMenu && <Menu onPress={() => setIsMenu(false)} />}
+        {isMenu && (
+          <Menu
+            onPressLogout={() => navigation.navigate("signIn")}
+            onPress={() => setIsMenu(false)}
+          />
+        )}
+
         <View
           style={{
             marginLeft: 250,
@@ -123,6 +134,7 @@ export function Characters() {
               style={{
                 marginLeft: 85,
               }}
+              onPress={handleSeeAll}
             >
               + Ver todos
             </TextTitle>
@@ -156,6 +168,7 @@ export function Characters() {
 
 interface Props {
   onPress: () => void;
+  onPressLogout: () => void;
 }
 
 const Menu = (props: Props) => {
@@ -166,8 +179,12 @@ const Menu = (props: Props) => {
         <TextMenu>Perfil</TextMenu>
         <TextMenu style={{ marginTop: 4 }}>Configurações</TextMenu>
         <TextMenu style={{ marginTop: 2 }}>Visite nosso site</TextMenu>
-        <TextMenu style={{ marginTop: 0 }}>Sair</TextMenu>
+        <TextMenu style={{ marginTop: 0 }} onPress={props.onPressLogout}>
+          Sair
+        </TextMenu>
       </ContainerMenuVisual>
     </ContainerMenu>
   );
 };
+
+export default Characters;

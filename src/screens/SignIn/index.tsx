@@ -15,7 +15,7 @@ import { AuthNavigatorRouteProps } from "@routes/auth.routes";
 export function SignIn() {
   const navigation = useNavigation<AuthNavigatorRouteProps>();
   function handleLogin() {
-    navigation.navigate("characters");
+    navigation.navigate("login");
   }
   return (
     <Container>

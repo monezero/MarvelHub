@@ -17,6 +17,10 @@ import {
   ViewCharacters,
   ViewCharactersBanner,
   ViewCharactersName,
+  ContainerMenu,
+  ContainerMenuVisual,
+  ImageMenu,
+  TextMenu,
 } from "./styles";
 
 import { Ionicons } from "@expo/vector-icons";
@@ -28,11 +32,16 @@ import { HqsBanner } from "@components/BannerHqs";
 import { AppRoutes } from "@routes/app.routes";
 import { CreatorsSquares } from "@components/SquareCreators";
 import { FlatlistHqs } from "@components/FlatlistHqs";
+import { useState } from "react";
 export function Comics() {
+  const [isMenu, setIsMenu] = useState(false);
   const navigation = useNavigation<AuthNavigatorRouteProps>();
-  // function handleLogout() {
-  //   navigation.navigate("signIn");
-  // }
+  function handleLogout() {
+    navigation.navigate("signIn");
+  }
+  function handleSeeAll() {
+    navigation.navigate("allComics");
+  }
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
       <View
@@ -42,8 +51,20 @@ export function Comics() {
           flexDirection: "row",
         }}
       >
-        <Ionicons name="menu" size={36} color="red" />
-
+        <Ionicons
+          name="menu"
+          size={36}
+          color="red"
+          onPress={() => {
+            setIsMenu(true);
+          }}
+        />
+        {isMenu && (
+          <Menu
+            onPressLogout={() => navigation.navigate("signIn")}
+            onPress={() => setIsMenu(false)}
+          />
+        )}
         <View
           style={{
             marginLeft: 250,
@@ -124,7 +145,7 @@ export function Comics() {
             <TextTitle>Quadrinhos</TextTitle>
           </View>
           <View style={{ marginRight: 43 }}>
-            <TextTitle>+ Ver todos</TextTitle>
+            <TextTitle onPress={handleSeeAll}>+ Ver todos</TextTitle>
           </View>
         </View>
         <View
@@ -154,3 +175,26 @@ export function Comics() {
     </SafeAreaView>
   );
 }
+
+interface Props {
+  onPress: () => void;
+  onPressLogout: () => void;
+}
+
+const Menu = (props: Props) => {
+  return (
+    <ContainerMenu>
+      <ContainerMenuVisual>
+        <ImageMenu source={require("@assets/profile.png")} />
+        <TextMenu>Perfil</TextMenu>
+        <TextMenu style={{ marginTop: 4 }}>Configurações</TextMenu>
+        <TextMenu style={{ marginTop: 2 }}>Visite nosso site</TextMenu>
+        <TextMenu style={{ marginTop: 0 }} onPress={props.onPressLogout}>
+          Sair
+        </TextMenu>
+      </ContainerMenuVisual>
+    </ContainerMenu>
+  );
+};
+
+export default Comics;
