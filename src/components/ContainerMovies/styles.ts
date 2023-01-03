@@ -2,6 +2,9 @@ import theme from "@theme/index";
 import { LinearGradient } from "expo-linear-gradient";
 import styled from "styled-components/native";
 
+export const ContainerFilter = styled.View`
+
+`
 export const Container = styled.View`
 flex: 1;
 margin-top: 60px;
@@ -170,8 +173,24 @@ width: 80px;
 
 `;
 
-export const SortBy = styled.TouchableOpacity`
+export const SortBy = styled.View`
+margin-left: 36px;
+top: -50px;
+position: absolute;
+height: auto;
+width: 110px;
+border-radius: 10px;
+border-width: 2px;
+border-color: ${theme.COLORS.RED};
+overflow: hidden;
 
-
-
+background-color: ${theme.COLORS.BLACK};
+`;
+ 
+export const SortByText = styled.Text`
+margin-left: 10px;
+padding: 4px;
+font-family: ${theme.FONT_FAMILY.AXIFORMA_BOLD};
+font-size: 12px;
+color: ${theme.COLORS.RED}
 `;
