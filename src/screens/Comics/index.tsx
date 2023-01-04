@@ -17,24 +17,26 @@ import {
   ViewCharacters,
   ViewCharactersBanner,
   ViewCharactersName,
-  ContainerMenu,
-  ContainerMenuVisual,
-  ImageMenu,
-  TextMenu,
+  ContainerIcons,
+  ContainerRight,
+  ContainerCentralize,
+  ContainerRow,
 } from "./styles";
-
+import { Menu } from "@components/Menu";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRouteProps } from "@routes/auth.routes";
 import { StatusBar, View } from "react-native";
 import { FlatlistHeros } from "@components/FlatlistHeros";
-import { HqsBanner } from "@components/BannerHqs";
+import { CharacterBanner } from "@components/BannerHeroes";
+import { ApparitionSquares } from "@components/SquareApparitions";
 import { AppRoutes } from "@routes/app.routes";
+import { useState } from "react";
+import { HqsBanner } from "@components/BannerHqs";
+import { HeroesBanner } from "@components/BannerHeroes/styles";
 import { CreatorsSquares } from "@components/SquareCreators";
 import { FlatlistHqs } from "@components/FlatlistHqs";
-import { useState } from "react";
 export function Comics() {
-  const [isMenu, setIsMenu] = useState(false);
   const navigation = useNavigation<AuthNavigatorRouteProps>();
   function handleLogout() {
     navigation.navigate("signIn");
@@ -42,159 +44,62 @@ export function Comics() {
   function handleSeeAll() {
     navigation.navigate("allComics");
   }
+
+  const [isMenu, setIsMenu] = useState(false);
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
-      <View
-        style={{
-          marginTop: 10,
-          marginLeft: 20,
-          flexDirection: "row",
-        }}
-      >
-        <Ionicons
-          name="menu"
-          size={36}
-          color="red"
-          onPress={() => {
-            setIsMenu(true);
-          }}
-        />
-        {isMenu && (
-          <Menu
-            onPressLogout={() => navigation.navigate("signIn")}
-            onPress={() => setIsMenu(false)}
-          />
-        )}
-        <View
-          style={{
-            marginLeft: 250,
-            marginTop: 10,
-          }}
-        >
-          <ContainerMarvelMini>
-            <LogoMini>MARVEL</LogoMini>
-          </ContainerMarvelMini>
-        </View>
-      </View>
       <Container>
-        <View
-          style={{
-            marginTop: 30,
-          }}
-        >
-          <TextTitle
-            style={{
-              marginRight: 118,
+        <ContainerIcons>
+          <Ionicons
+            name="menu"
+            size={36}
+            color="red"
+            onPress={() => {
+              setIsMenu(true);
             }}
-          >
-            Top 10 - HQs Populares
-          </TextTitle>
-        </View>
-        <View
-          style={{
-            alignItems: "center",
-            width: "50%",
-          }}
-        >
+          />
+          <ContainerRight>
+            <ContainerMarvelMini>
+              <LogoMini>MARVEL</LogoMini>
+            </ContainerMarvelMini>
+          </ContainerRight>
+        </ContainerIcons>
+        <ContainerCentralize>
+          <TextTitle>Top 10 - HQs Populares</TextTitle>
           <FlatlistHqs />
-        </View>
-        <View
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            width: "70%",
-            marginTop: 20,
-          }}
-        >
+
           <TextDescription>
-            O único oponente do Devorador de Mundos é o herói que ele aprisionou
-            na Terra: o Surfista Prateado...{" "}
+            O único oponente do Devorador de{"\n"} Mundos é o herói que ele
+            aprisionou na{"\n"} Terra: o Surfista Prateado...
           </TextDescription>
-        </View>
-        <View
-          style={{
-            marginRight: 225,
-          }}
-        >
+
           <TextMini>ver mais</TextMini>
-        </View>
-        <View
-          style={{
-            marginRight: 235,
-            marginTop: 40,
-          }}
-        >
-          <TextTitle>Criadores:</TextTitle>
-        </View>
-        <View
-          style={{
-            marginRight: 180,
-          }}
-        >
+
+          <TextTitle style={{ alignSelf: "flex-start", marginLeft: 76 }}>
+            Criadores:
+          </TextTitle>
+
           <CreatorsSquares />
-        </View>
-
-        <View
-          style={{
-            flexDirection: "row",
-
-            marginTop: 50,
-          }}
-        >
-          <View style={{ flex: 1, marginLeft: 22 }}>
+          <ContainerRow>
             <TextTitle>Quadrinhos</TextTitle>
-          </View>
-          <View style={{ marginRight: 43 }}>
-            <TextTitle onPress={handleSeeAll}>+ Ver todos</TextTitle>
-          </View>
-        </View>
-        <View
-          style={{
-            flexDirection: "row",
-            width: "70%",
-            marginTop: 30,
-          }}
-        >
+            <TextTitle style={{ marginLeft: 91.5 }} onPress={handleSeeAll}>
+              + Ver todos
+            </TextTitle>
+          </ContainerRow>
           <HqsBanner />
-        </View>
-        <View
-          style={{
-            flexDirection: "row",
-            padding: 25,
-            marginTop: 6,
-          }}
-        >
-          <TextCharacterName style={{ flex: 1, marginLeft: 50 }}>
-            Em busca do poder
-          </TextCharacterName>
-          <TextCharacterName style={{ marginRight: 36 }}>
-            Wolverine - Origens
-          </TextCharacterName>
-        </View>
+          <ContainerRow>
+            <TextCharacterName style={{ marginLeft: 6 }}>
+              Em busca de poder
+            </TextCharacterName>
+            <TextCharacterName style={{ marginLeft: 50 }}>
+              Wolverine - Origens
+            </TextCharacterName>
+          </ContainerRow>
+        </ContainerCentralize>
       </Container>
     </SafeAreaView>
   );
 }
-
-interface Props {
-  onPress: () => void;
-  onPressLogout: () => void;
-}
-
-const Menu = (props: Props) => {
-  return (
-    <ContainerMenu>
-      <ContainerMenuVisual>
-        <ImageMenu source={require("@assets/profile.png")} />
-        <TextMenu>Perfil</TextMenu>
-        <TextMenu style={{ marginTop: 4 }}>Configurações</TextMenu>
-        <TextMenu style={{ marginTop: 2 }}>Visite nosso site</TextMenu>
-        <TextMenu style={{ marginTop: 0 }} onPress={props.onPressLogout}>
-          Sair
-        </TextMenu>
-      </ContainerMenuVisual>
-    </ContainerMenu>
-  );
-};
 
 export default Comics;

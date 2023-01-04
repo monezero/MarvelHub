@@ -3,17 +3,37 @@ import theme from "@theme/index";
 
 export const Container = styled.View`
   width: 100%;
-  background-color: ${({ theme }) => theme.COLORS.BLACK};
-  align-items: center;
-  flex: 1;
+  height: 100%;
+`;
+
+export const ContainerIcons = styled.View`
+margin-top: 10px;
+margin-left: 20px;
+flex-direction: row;
+`;
+
+export const ContainerRight = styled.View`
+left: 230px;
+margin-top: 10px;
+`;
+
+export const ContainerCentralize = styled.View`
+width: 100%;
+margin-top: 60px;
+justify-content: center;
+align-items: center;
+
 `;
 
 export const TextTitle = styled.Text`
+ 
+  margin-top: 30px;
+  
   font-size: 18px;
   font-family: ${theme.FONT_FAMILY.AXIFORMA_MEDIUM};
   color: ${theme.COLORS.WHITE};
-  flex-direction: row;
-  margin-left: 40px;
+  
+
 `;
 
 export const ContainerMarvelMini = styled.View`
@@ -25,18 +45,25 @@ export const ContainerMarvelMini = styled.View`
 `;
 
 export const LogoMini = styled.Text`
+  
   font-family: ${({ theme }) => theme.FONT_FAMILY.MARVEL_REGULAR};
   font-size: 30px;
   color: ${({theme}) => theme.COLORS.WHITE};
 `;
 
 export const TextDescription = styled.Text`
+  
+ margin-top: 20px;
+ line-height: 20px;
  font-family: ${({theme}) => theme.FONT_FAMILY.AXIFORMA_THIN};
  font-size: 14px;
- color: ${({theme}) => theme.COLORS.WHITE}
+ color: ${({theme}) => theme.COLORS.WHITE};
 `;
 
 export const TextMini = styled.Text`
+
+align-self: flex-start;
+margin-left: 76px;
 font-family: ${({theme}) => theme.FONT_FAMILY.AXIFORMA_BOOK};
 font-size: 10px;
 color: ${({theme}) => theme.COLORS.RED}
@@ -110,43 +137,12 @@ margin-top: 6px;
 
 `;
 
-export const ContainerMenu = styled.View`
-height: 100%;
-width: 100%;
-flex-direction: column;
-`;
 
-export const ContainerMenuVisual = styled.View`
 
-right: 300px;
-position: absolute;
-height: 220px;
-width: 160px;
-background-color: ${theme.COLORS.BLACK};
-border-width: 2px;
-border-radius: 30px ;
-overflow: hidden;
-border-color: ${theme.COLORS.RED};
-z-index: 1;
-`;
+export const ContainerRow = styled.View`
 
-export const ImageMenu = styled.Image`
-position: absolute;
-height: 60px;
-width: 60px;
-border-image: 30px;
-border-color: ${theme.COLORS.RED};
-overflow: hidden;
-z-index: 3;
+align-self: flex-start;
+margin-left: 76px;
+margin-top: 10px;
+flex-direction: row;
 `
-
-export const TextMenu = styled.Text`
-margin-left: 10px;
-margin-top: 60px;
-font-family: ${theme.FONT_FAMILY.AXIFORMA_REGULAR};
-font-size: 17px;
-line-height: 30px;
-color: ${theme.COLORS.RED};
-position: relative;
-z-index: 2;
-`;

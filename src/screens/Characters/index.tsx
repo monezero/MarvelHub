@@ -17,12 +17,12 @@ import {
   ViewCharacters,
   ViewCharactersBanner,
   ViewCharactersName,
-  ContainerMenu,
-  ContainerMenuVisual,
-  ImageMenu,
-  TextMenu,
+  ContainerIcons,
+  ContainerRight,
+  ContainerCentralize,
+  ContainerRow,
 } from "./styles";
-
+import { Menu } from "@components/Menu";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRouteProps } from "@routes/auth.routes";
@@ -32,6 +32,8 @@ import { CharacterBanner } from "@components/BannerHeroes";
 import { ApparitionSquares } from "@components/SquareApparitions";
 import { AppRoutes } from "@routes/app.routes";
 import { useState } from "react";
+import { HqsBanner } from "@components/BannerHqs";
+import { HeroesBanner } from "@components/BannerHeroes/styles";
 export function Characters() {
   const navigation = useNavigation<AuthNavigatorRouteProps>();
   function handleLogout() {
@@ -45,146 +47,58 @@ export function Characters() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
-      <View
-        style={{
-          marginTop: 10,
-          marginLeft: 20,
-          flexDirection: "row",
-        }}
-      >
-        <Ionicons
-          name="menu"
-          size={36}
-          color="red"
-          onPress={() => {
-            setIsMenu(true);
-          }}
-        />
-        {isMenu && (
-          <Menu
-            onPressLogout={() => navigation.navigate("signIn")}
-            onPress={() => setIsMenu(false)}
-          />
-        )}
-
-        <View
-          style={{
-            marginLeft: 250,
-            marginTop: 10,
-          }}
-        >
-          <ContainerMarvelMini>
-            <LogoMini>MARVEL</LogoMini>
-          </ContainerMarvelMini>
-        </View>
-      </View>
       <Container>
-        <View
-          style={{
-            marginTop: 30,
-          }}
-        >
-          <TextTitle>Top 10 - Personagens Populares</TextTitle>
-        </View>
-        <View
-          style={{
-            alignItems: "center",
-            width: "50%",
-          }}
-        >
-          <FlatlistHeros />
-        </View>
-        <View
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            maxWidth: "70%",
-            marginTop: 20,
-          }}
-        >
-          <TextDescription>
-            Wanda Maximoff foi sequestrada da Sérvia e trazida para a Montanha
-            Wundagore, base do Alto Evolucionário.{" "}
-          </TextDescription>
-        </View>
-        <View
-          style={{
-            marginRight: 225,
-          }}
-        >
-          <TextMini>ver mais</TextMini>
-        </View>
-        <View
-          style={{
-            marginLeft: 20,
-            marginTop: 40,
-          }}
-        >
-          <TextTitle>Aparições:</TextTitle>
-          <ApparitionSquares />
-          <View
-            style={{
-              flexDirection: "row",
-              width: "70%",
-              marginTop: 50,
+        <ContainerIcons>
+          <Ionicons
+            name="menu"
+            size={36}
+            color="red"
+            onPress={() => {
+              setIsMenu(true);
             }}
-          >
+          />
+          <ContainerRight>
+            <ContainerMarvelMini>
+              <LogoMini>MARVEL</LogoMini>
+            </ContainerMarvelMini>
+          </ContainerRight>
+        </ContainerIcons>
+        <ContainerCentralize>
+          <TextTitle>Top 10 - Personagens Populares</TextTitle>
+          <FlatlistHeros />
+
+          <TextDescription>
+            Wanda Maximoff foi sequestrada da{"\n"} Sérvia e trazida para a
+            Montanha{"\n"}
+            Wundagore, base do Alto Evolucionário.
+          </TextDescription>
+
+          <TextMini>ver mais</TextMini>
+
+          <TextTitle style={{ alignSelf: "flex-start", marginLeft: 76 }}>
+            Aparições:
+          </TextTitle>
+
+          <ApparitionSquares />
+          <ContainerRow>
             <TextTitle>Personagens</TextTitle>
-            <TextTitle
-              style={{
-                marginLeft: 85,
-              }}
-              onPress={handleSeeAll}
-            >
+            <TextTitle style={{ marginLeft: 80 }} onPress={handleSeeAll}>
               + Ver todos
             </TextTitle>
-          </View>
-          <View
-            style={{
-              flexDirection: "row",
-              width: "100%",
-              marginTop: 30,
-            }}
-          >
-            <CharacterBanner />
-          </View>
-          <View
-            style={{
-              flexDirection: "row",
-              padding: 25,
-              marginTop: 6,
-            }}
-          >
-            <TextCharacterName>Homem Aranha</TextCharacterName>
-            <TextCharacterName style={{ marginLeft: 105 }}>
+          </ContainerRow>
+          <CharacterBanner />
+          <ContainerRow>
+            <TextCharacterName style={{ marginLeft: 16 }}>
+              Homem-aranha
+            </TextCharacterName>
+            <TextCharacterName style={{ marginLeft: 100 }}>
               Hulk
             </TextCharacterName>
-          </View>
-        </View>
+          </ContainerRow>
+        </ContainerCentralize>
       </Container>
     </SafeAreaView>
   );
 }
-
-interface Props {
-  onPress: () => void;
-  onPressLogout: () => void;
-}
-
-const Menu = (props: Props) => {
-  return (
-    <ContainerMenu>
-      <ContainerMenuVisual>
-        <ImageMenu source={require("@assets/profile.png")} />
-        <TextMenu>Perfil</TextMenu>
-        <TextMenu style={{ marginTop: 4 }}>Configurações</TextMenu>
-        <TextMenu style={{ marginTop: 2 }}>Visite nosso site</TextMenu>
-        <TextMenu style={{ marginTop: 0 }} onPress={props.onPressLogout}>
-          Sair
-        </TextMenu>
-      </ContainerMenuVisual>
-    </ContainerMenu>
-  );
-};
 
 export default Characters;

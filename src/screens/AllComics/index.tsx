@@ -8,6 +8,7 @@ import {
   ImageMenu,
   TextMenu,
 } from "./styles";
+import { Menu } from "@components/Menu";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
@@ -92,26 +93,5 @@ export function AllComics() {
     </SafeAreaView>
   );
 }
-
-interface Props {
-  onPress: () => void;
-  onPressLogout: () => void;
-}
-
-const Menu = (props: Props) => {
-  return (
-    <ContainerMenu>
-      <ContainerMenuVisual>
-        <ImageMenu source={require("@assets/profile.png")} />
-        <TextMenu>Perfil</TextMenu>
-        <TextMenu style={{ marginTop: 4 }}>Configurações</TextMenu>
-        <TextMenu style={{ marginTop: 2 }}>Visite nosso site</TextMenu>
-        <TextMenu style={{ marginTop: 0 }} onPress={props.onPressLogout}>
-          Sair
-        </TextMenu>
-      </ContainerMenuVisual>
-    </ContainerMenu>
-  );
-};
 
 export default AllComics;

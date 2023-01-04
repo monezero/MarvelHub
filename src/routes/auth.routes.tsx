@@ -35,7 +35,6 @@ export function AuthRoutes() {
       <Screen name="allCharacters" component={AllCharacters} />
       <Screen name="allMovies" component={AllMovies} />
       <Screen name="allComics" component={AllComics} />
-
       <Screen name="characters" component={Characters} />
       <Screen name="comics" component={Comics} />
       <Screen name="films" component={Films} />

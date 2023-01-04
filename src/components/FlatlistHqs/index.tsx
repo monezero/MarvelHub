@@ -39,7 +39,7 @@ export function FlatlistHqs() {
       renderItem={render_Item}
       style={{
         width: 300,
-
+        alignSelf: "center",
         borderColor: "#ff0000",
         borderRadius: 30,
       }}

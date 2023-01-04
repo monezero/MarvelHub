@@ -41,6 +41,7 @@ export function FlatlistMovies() {
         width: 300,
         borderColor: "#ff0000",
         borderRadius: 30,
+        alignSelf: "center",
       }}
     />
   );

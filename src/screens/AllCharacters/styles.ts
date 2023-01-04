@@ -18,17 +18,21 @@ export const TextTitle = styled.Text`
 `;
 
 export const ContainerMarvelMini = styled.View`
+ 
   align-items: center;
   background-color: ${theme.COLORS.RED};
   padding: 3px;
+  
   
 
 `;
 
 export const LogoMini = styled.Text`
+ 
   font-family: ${({ theme }) => theme.FONT_FAMILY.MARVEL_REGULAR};
   font-size: 30px;
   color: ${({theme}) => theme.COLORS.WHITE};
+  
 `;
 
 

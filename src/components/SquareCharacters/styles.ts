@@ -5,9 +5,8 @@ const { width, height } = Dimensions.get("window");
 
 
 export const Container = styled.View`
+  margin-top: 10px;
   width: ${width * 0.7}px;
-  align-items: center;
-  justify-content: center;
   flex-direction: row;
    
 
