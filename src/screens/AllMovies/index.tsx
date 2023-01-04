@@ -7,6 +7,7 @@ import {
   ContainerMenuVisual,
   ImageMenu,
   TextMenu,
+  ContainerRight,
 } from "./styles";
 import { Menu } from "@components/Menu";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -47,6 +48,11 @@ export function AllMovies() {
             setIsMenu(true);
           }}
         />
+        <ContainerRight>
+          <ContainerMarvelMini>
+            <LogoMini>MARVEL</LogoMini>
+          </ContainerMarvelMini>
+        </ContainerRight>
         {isMenu && (
           <Menu
             onPress={() => setIsMenu(false)}
@@ -59,11 +65,7 @@ export function AllMovies() {
             marginLeft: 250,
             marginTop: 10,
           }}
-        >
-          <ContainerMarvelMini>
-            <LogoMini>MARVEL</LogoMini>
-          </ContainerMarvelMini>
-        </View>
+        ></View>
       </View>
       <View
         style={{

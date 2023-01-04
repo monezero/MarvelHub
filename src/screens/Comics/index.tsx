@@ -64,22 +64,24 @@ export function Comics() {
               <LogoMini>MARVEL</LogoMini>
             </ContainerMarvelMini>
           </ContainerRight>
+          {isMenu && (
+            <Menu
+              onPressLogout={() => navigation.navigate("signIn")}
+              onPress={() => setIsMenu(false)}
+            />
+          )}
         </ContainerIcons>
         <ContainerCentralize>
           <TextTitle>Top 10 - HQs Populares</TextTitle>
           <FlatlistHqs />
-
           <TextDescription>
             O único oponente do Devorador de{"\n"} Mundos é o herói que ele
             aprisionou na{"\n"} Terra: o Surfista Prateado...
           </TextDescription>
-
           <TextMini>ver mais</TextMini>
-
           <TextTitle style={{ alignSelf: "flex-start", marginLeft: 76 }}>
             Criadores:
           </TextTitle>
-
           <CreatorsSquares />
           <ContainerRow>
             <TextTitle>Quadrinhos</TextTitle>

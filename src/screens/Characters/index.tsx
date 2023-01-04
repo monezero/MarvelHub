@@ -62,23 +62,25 @@ export function Characters() {
               <LogoMini>MARVEL</LogoMini>
             </ContainerMarvelMini>
           </ContainerRight>
+          {isMenu && (
+            <Menu
+              onPressLogout={() => navigation.navigate("signIn")}
+              onPress={() => setIsMenu(false)}
+            />
+          )}
         </ContainerIcons>
         <ContainerCentralize>
           <TextTitle>Top 10 - Personagens Populares</TextTitle>
           <FlatlistHeros />
-
           <TextDescription>
             Wanda Maximoff foi sequestrada da{"\n"} Sérvia e trazida para a
             Montanha{"\n"}
             Wundagore, base do Alto Evolucionário.
           </TextDescription>
-
           <TextMini>ver mais</TextMini>
-
           <TextTitle style={{ alignSelf: "flex-start", marginLeft: 76 }}>
             Aparições:
           </TextTitle>
-
           <ApparitionSquares />
           <ContainerRow>
             <TextTitle>Personagens</TextTitle>

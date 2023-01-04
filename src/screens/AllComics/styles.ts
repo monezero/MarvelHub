@@ -74,3 +74,8 @@ color: ${theme.COLORS.RED};
 position: absolute;
 z-index: 2;
 `;
+
+export const ContainerRight = styled.View`
+left: 230px;
+margin-top: 10px;
+`;

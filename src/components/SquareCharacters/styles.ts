@@ -8,6 +8,7 @@ export const Container = styled.View`
   margin-top: 10px;
   width: ${width * 0.7}px;
   flex-direction: row;
+  margin-left: 12px;
    
 
 `;

@@ -29,73 +29,89 @@ export function MoviesContainer() {
   const [isDetails, setisDetails] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>("Lancamento");
   return (
-    <Container>
-      <Image source={require("@assets/moviescontainer1.png")} />
-      <ContainerVisual
-        colors={["transparent", "#f00"]}
-        start={{ x: 3, y: 3 }}
-        end={{ x: 0, y: 0 }}
-      >
-        <ContainerTitle>Homem de Ferro</ContainerTitle>
-        <ContainerDescription>
-          Tony Stark (Robert Downey Jr.) é{"\n"} um industrial bilionário, que
-          {"\n"} também é um brilhante inventor,{"\n"} ao ser sequestrado...
-        </ContainerDescription>
-        <ContainerDetails>Ver detalhes</ContainerDetails>
-      </ContainerVisual>
-      {isDetails && <Details onPress={() => setisDetails(false)} />}
-      <Image source={require("@assets/moviescontainer2.png")} />
-      <ContainerVisual
-        colors={["transparent", "#f00"]}
-        start={{ x: 3, y: 3 }}
-        end={{ x: 0, y: 0 }}
-        style={{ marginLeft: 220 }}
-      >
-        <ContainerTitle>Homem de Ferro 2</ContainerTitle>
-        <ContainerDescription>
-          O mundo já sabe que o inventor{"\n"} bilionário Tony Stark (Robert
-          {"\n"} Downey Jr.) é o super-herói{"\n"} blindado Homem de Ferro....
-        </ContainerDescription>
-        <ContainerDetails>Ver Detalhes</ContainerDetails>
-      </ContainerVisual>
-      <Image source={require("@assets/thor.png")} style={{ marginTop: 40 }} />
-      <ContainerVisual
-        colors={["transparent", "#f00"]}
-        start={{ x: 3, y: 3 }}
-        end={{ x: 0, y: 0 }}
-        style={{ marginTop: 400 }}
-      >
-        <ContainerTitle>Thor</ContainerTitle>
-        <ContainerDescription>
-          Quando é banido do reino de{"\n"} Asgard e exilado na Terra, o{"\n"}{" "}
-          arrogante guerreiro Thor (Chris{"\n"} Hemsworth) é obrigado a lutar
-          {"\n"}
-          para reaver seus poderes perdidos.
-        </ContainerDescription>
-        <ContainerDetails>Ver Detalhes</ContainerDetails>
-      </ContainerVisual>
-      <Image
-        source={require("@assets/captain_america.png")}
-        style={{ marginTop: 40 }}
-      />
-      <ContainerVisual
-        colors={["transparent", "#f00"]}
-        start={{ x: 3, y: 3 }}
-        end={{ x: 0, y: 0 }}
-        style={{ marginTop: 400, marginLeft: 220 }}
-      >
-        <ContainerTitle>Capitão America </ContainerTitle>
-        <ContainerDescription>
-          Em Capitão América: O Primeiro{"\n"} Vingador, conhecemos a história
-          {"\n"} de Steve Rogers (Chris Evans) e{"\n"} como ele se tornou o
-          melhor{"\n"} soldado do mundo.
-        </ContainerDescription>
-        <ContainerDetails>Ver Detalhes</ContainerDetails>
-      </ContainerVisual>
+    <>
+      {selectedOption === "Lancamento" && (
+        <Container>
+          <Image source={require("@assets/moviescontainer1.png")} />
+          <ContainerVisual
+            colors={["transparent", "#f00"]}
+            start={{ x: 3, y: 3 }}
+            end={{ x: 0, y: 0 }}
+          >
+            <ContainerTitle>Homem de Ferro</ContainerTitle>
+            <ContainerDescription>
+              Tony Stark (Robert Downey Jr.) é{"\n"} um industrial bilionário,
+              que
+              {"\n"} também é um brilhante inventor,{"\n"} ao ser sequestrado...
+            </ContainerDescription>
+            <ContainerDetails>Ver detalhes</ContainerDetails>
+          </ContainerVisual>
+          {isDetails && <Details onPress={() => setisDetails(false)} />}
+          <Image source={require("@assets/moviescontainer2.png")} />
+          <ContainerVisual
+            colors={["transparent", "#f00"]}
+            start={{ x: 3, y: 3 }}
+            end={{ x: 0, y: 0 }}
+            style={{ marginLeft: 220 }}
+          >
+            <ContainerTitle>Homem de Ferro 2</ContainerTitle>
+            <ContainerDescription>
+              O mundo já sabe que o inventor{"\n"} bilionário Tony Stark (Robert
+              {"\n"} Downey Jr.) é o super-herói{"\n"} blindado Homem de
+              Ferro....
+            </ContainerDescription>
+            <ContainerDetails>Ver Detalhes</ContainerDetails>
+          </ContainerVisual>
+          <Image
+            source={require("@assets/thor.png")}
+            style={{ marginTop: 40 }}
+          />
+          <ContainerVisual
+            colors={["transparent", "#f00"]}
+            start={{ x: 3, y: 3 }}
+            end={{ x: 0, y: 0 }}
+            style={{ marginTop: 400 }}
+          >
+            <ContainerTitle>Thor</ContainerTitle>
+            <ContainerDescription>
+              Quando é banido do reino de{"\n"} Asgard e exilado na Terra, o
+              {"\n"} arrogante guerreiro Thor (Chris{"\n"} Hemsworth) é obrigado
+              a lutar
+              {"\n"}
+              para reaver seus poderes perdidos.
+            </ContainerDescription>
+            <ContainerDetails>Ver Detalhes</ContainerDetails>
+          </ContainerVisual>
+          <Image
+            source={require("@assets/captain_america.png")}
+            style={{ marginTop: 40 }}
+          />
+          <ContainerVisual
+            colors={["transparent", "#f00"]}
+            start={{ x: 3, y: 3 }}
+            end={{ x: 0, y: 0 }}
+            style={{ marginTop: 400, marginLeft: 220 }}
+          >
+            <ContainerTitle>Capitão America </ContainerTitle>
+            <ContainerDescription>
+              Em Capitão América: O Primeiro{"\n"} Vingador, conhecemos a
+              história
+              {"\n"} de Steve Rogers (Chris Evans) e{"\n"} como ele se tornou o
+              melhor{"\n"} soldado do mundo.
+            </ContainerDescription>
+            <ContainerDetails>Ver Detalhes</ContainerDetails>
+          </ContainerVisual>
+          <Picker
+            onPressOption={(option: string) => setSelectedOption(option)}
+          />
+        </Container>
+      )}
 
-      <Picker onPressOption={(option: string) => setSelectedOption(option)} />
       {selectedOption === "Cronologia" && (
         <Container>
+          <Picker
+            onPressOption={(option: string) => setSelectedOption(option)}
+          />
           <Image
             source={require("@assets/captain_america.png")}
             style={{ marginTop: 40 }}
@@ -181,7 +197,7 @@ export function MoviesContainer() {
           </ContainerVisual>
         </Container>
       )}
-    </Container>
+    </>
   );
 }
 

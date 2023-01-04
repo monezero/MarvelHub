@@ -7,6 +7,7 @@ import {
   ContainerMenuVisual,
   ImageMenu,
   TextMenu,
+  ContainerRight,
 } from "./styles";
 import { Menu } from "@components/Menu";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -47,23 +48,17 @@ export function AllCharacters() {
             setIsMenu(true);
           }}
         />
+        <ContainerRight>
+          <ContainerMarvelMini>
+            <LogoMini>MARVEL</LogoMini>
+          </ContainerMarvelMini>
+        </ContainerRight>
         {isMenu && (
           <Menu
             onPressLogout={() => navigation.navigate("signIn")}
             onPress={() => setIsMenu(false)}
           />
         )}
-
-        <View
-          style={{
-            marginLeft: 250,
-            marginTop: 10,
-          }}
-        >
-          <ContainerMarvelMini>
-            <LogoMini>MARVEL</LogoMini>
-          </ContainerMarvelMini>
-        </View>
       </View>
       <View
         style={{

@@ -183,7 +183,7 @@ border-radius: 10px;
 border-width: 2px;
 border-color: ${theme.COLORS.RED};
 overflow: hidden;
-
+z-index: 9999;
 background-color: ${theme.COLORS.BLACK};
 `;
  

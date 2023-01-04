@@ -60,6 +60,12 @@ export function Films() {
               setIsMenu(true);
             }}
           />
+          {isMenu && (
+            <Menu
+              onPressLogout={() => navigation.navigate("signIn")}
+              onPress={() => setIsMenu(false)}
+            />
+          )}
           <ContainerRight>
             <ContainerMarvelMini>
               <LogoMini>MARVEL</LogoMini>
@@ -69,19 +75,15 @@ export function Films() {
         <ContainerCentralize>
           <TextTitle>Top 10 - Filmes Populares</TextTitle>
           <FlatlistMovies />
-
           <TextDescription>
             Homem de Ferro, Thor, Hulk e os{"\n"} Vingadores se unem para
             combater seu{"\n"}
             inimigo mais poderoso, o maligno Thanos.
           </TextDescription>
-
           <TextMini>ver mais</TextMini>
-
           <TextTitle style={{ alignSelf: "flex-start", marginLeft: 76 }}>
-            Aparições:
+            Personagens:
           </TextTitle>
-
           <CharactersSquares />
           <ContainerRow>
             <TextTitle>Filmes</TextTitle>

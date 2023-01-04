@@ -39,7 +39,6 @@ export function SignIn() {
       <SafeAreaView>
         <View style={{ width: "100%", alignItems: "center" }}>
           <Header />
-
           <Input placeholder="E-mail" autoCorrect={false}></Input>
           <Input placeholder="Senha" autoCorrect={false}></Input>
           <View style={{ width: "100%", alignItems: "center" }}>
@@ -47,10 +46,7 @@ export function SignIn() {
             <CheckBox />
             <TextMain>
               É novo(a) aqui?
-              <TextMain style={{ color: "#FF0000" }}>
-                {" "}
-                Cadastre-se{" "}
-              </TextMain>{" "}
+              <TextMain style={{ color: "#FF0000" }}>Cadastre-se</TextMain>
             </TextMain>
           </View>
         </View>

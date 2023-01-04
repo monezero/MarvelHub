@@ -145,4 +145,5 @@ align-self: flex-start;
 margin-left: 76px;
 margin-top: 10px;
 flex-direction: row;
+justify-content: space-between;
 `

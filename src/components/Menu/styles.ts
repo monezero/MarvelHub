@@ -10,7 +10,7 @@ flex-direction: column;
 `;
 
 export const ContainerMenuVisual = styled.View`
-right: 300px;
+right: 360px;
 position: absolute;
 height: 220px;
 width: 160px;
