@@ -121,7 +121,7 @@ const Details = (props: Props) => {
           size={30}
           color="white"
           style={{
-            marginTop: 440,
+            marginTop: 420,
             marginLeft: 300,
             position: "absolute",
             zIndex: 5,

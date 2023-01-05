@@ -60,17 +60,17 @@ export function Films() {
               setIsMenu(true);
             }}
           />
+          <ContainerRight>
+            <ContainerMarvelMini>
+              <LogoMini>MARVEL</LogoMini>
+            </ContainerMarvelMini>
+          </ContainerRight>
           {isMenu && (
             <Menu
               onPressLogout={() => navigation.navigate("signIn")}
               onPress={() => setIsMenu(false)}
             />
           )}
-          <ContainerRight>
-            <ContainerMarvelMini>
-              <LogoMini>MARVEL</LogoMini>
-            </ContainerMarvelMini>
-          </ContainerRight>
         </ContainerIcons>
         <ContainerCentralize>
           <TextTitle>Top 10 - Filmes Populares</TextTitle>

@@ -140,7 +140,7 @@ const Details = (props: Props) => {
           size={30}
           color="white"
           style={{
-            marginTop: 440,
+            marginTop: 430,
             marginLeft: 300,
             position: "absolute",
             zIndex: 5,
@@ -153,7 +153,7 @@ const Details = (props: Props) => {
           size={24}
           color="orange"
           style={{
-            marginTop: 440,
+            marginTop: 430,
             marginLeft: 30,
             position: "absolute",
             zIndex: 5,
@@ -164,7 +164,7 @@ const Details = (props: Props) => {
           size={24}
           color="orange"
           style={{
-            marginTop: 440,
+            marginTop: 430,
             marginLeft: 60,
             position: "absolute",
             zIndex: 5,
@@ -175,7 +175,7 @@ const Details = (props: Props) => {
           size={24}
           color="orange"
           style={{
-            marginTop: 440,
+            marginTop: 430,
             marginLeft: 90,
             position: "absolute",
             zIndex: 5,
@@ -186,7 +186,7 @@ const Details = (props: Props) => {
           size={24}
           color="orange"
           style={{
-            marginTop: 440,
+            marginTop: 430,
             marginLeft: 120,
             position: "absolute",
             zIndex: 5,
@@ -197,7 +197,7 @@ const Details = (props: Props) => {
           size={24}
           color="gray"
           style={{
-            marginTop: 440,
+            marginTop: 430,
             marginLeft: 150,
             position: "absolute",
             zIndex: 5,

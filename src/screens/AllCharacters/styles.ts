@@ -43,43 +43,32 @@ export const Circle = styled.View`
   border-radius: 12,5px;
 `;
 
-export const ContainerMenu = styled.View`
-height: 100%;
-width: 100%;
-justify-content: start;
-`;
-
-export const ContainerMenuVisual = styled.View`
-position: absolute;
-height: 400px;
-width: 400px;
-background-color: ${theme.COLORS.BLACK};
-border-radius: 18px ;
-overflow: hidden;
-border-color: ${theme.COLORS.RED};
-z-index: 1;
-`;
-
-export const ImageMenu = styled.Image`
-position: absolute;
-height: 60px;
-width: 60px;
-border-image: 30px;
-border-color: ${theme.COLORS.RED};
-overflow: hidden;
-z-index: 3;
-`
-
-export const TextMenu = styled.Text`
-font-family: ${theme.FONT_FAMILY.AXIFORMA_REGULAR};
-font-size: 17px;
-line-height: 30px;
-color: ${theme.COLORS.RED};
-position: absolute;
-z-index: 2;
-`;
-
 export const ContainerRight = styled.View`
 left: 230px;
 margin-top: 10px;
+`;
+
+export const ContainerTop = styled.View`
+margin-top: 10px;
+margin-left: 20px;
+flex-direction: row;
+`
+
+export const ContainerLeftTop = styled.View`
+margin-left: 250px;
+margin-top: 10px;
+`;
+
+export const ContainerRow = styled.View`
+flex-direction: row;
+margin-top: 30px;
+margin-left: 25px;
+`;
+
+
+export const ContainerCenter = styled.View`
+justify-content: center;
+align-items: center;
+margin-top: 200px;
+
 `;

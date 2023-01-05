@@ -31,17 +31,20 @@ export function AppRoutes() {
           position: "absolute",
           width: 250,
           height: 40,
-          top: 450,
+          top: 500,
           bottom: 0,
           left: 0,
           right: 0,
-          marginRight: 250,
+
           elevation: 0,
-          borderColor: "#000",
-          shadowColor: "transparent",
+          borderTopColor: "#f00",
+          borderBottomColor: "#f00",
+          borderRightColor: "#f00",
+          borderLeftColor: "#f00",
+          shadowColor: "#f00",
           backgroundColor: "#f00",
           borderRadius: 30,
-          borderWidth: 3,
+
           overflow: "hidden",
 
           transform: [

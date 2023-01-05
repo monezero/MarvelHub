@@ -112,15 +112,12 @@ export function MoviesContainer() {
           <Picker
             onPressOption={(option: string) => setSelectedOption(option)}
           />
-          <Image
-            source={require("@assets/captain_america.png")}
-            style={{ marginTop: 40 }}
-          />
+          <Image source={require("@assets/captain_america.png")} style={{}} />
           <ContainerVisual
             colors={["transparent", "#f00"]}
             start={{ x: 3, y: 3 }}
             end={{ x: 0, y: 0 }}
-            style={{ marginTop: 400, marginLeft: 220 }}
+            style={{}}
           >
             <ContainerTitle>Capitão America</ContainerTitle>
             <ContainerDescription>
@@ -137,16 +134,14 @@ export function MoviesContainer() {
               Ver Detalhes
             </ContainerDetails>
           </ContainerVisual>
+          {isDetails && <Details onPress={() => setisDetails(false)} />}
 
-          <Image
-            source={require("@assets/captain_america.png")}
-            style={{ marginTop: 40 }}
-          />
+          <Image source={require("@assets/captain_marvel.png")} style={{}} />
           <ContainerVisual
             colors={["transparent", "#f00"]}
             start={{ x: 3, y: 3 }}
             end={{ x: 0, y: 0 }}
-            style={{ marginTop: 400, marginLeft: 220 }}
+            style={{ marginLeft: 220 }}
           >
             <ContainerTitle>Capitã Marvel</ContainerTitle>
             <ContainerDescription>
@@ -159,14 +154,14 @@ export function MoviesContainer() {
           </ContainerVisual>
 
           <Image
-            source={require("@assets/captain_america.png")}
+            source={require("@assets/moviescontainer1.png")}
             style={{ marginTop: 40 }}
           />
           <ContainerVisual
             colors={["transparent", "#f00"]}
             start={{ x: 3, y: 3 }}
             end={{ x: 0, y: 0 }}
-            style={{ marginTop: 400, marginLeft: 220 }}
+            style={{ marginTop: 400 }}
           >
             <ContainerTitle>Homem de Ferro</ContainerTitle>
             <ContainerDescription>
@@ -178,7 +173,7 @@ export function MoviesContainer() {
           </ContainerVisual>
 
           <Image
-            source={require("@assets/captain_america.png")}
+            source={require("@assets/moviescontainer2.png")}
             style={{ marginTop: 40 }}
           />
           <ContainerVisual
@@ -208,7 +203,7 @@ interface Props {
 const Details = (props: Props) => {
   return (
     <Container1>
-      <ImageSeeDetails source={require("@assets/parabola.png")} />
+      <ImageSeeDetails source={require("@assets/cap_america.png")} />
       <ContainerSeeDetails colors={["#f00", "#800000"]}>
         <TitleSeeDetails>
           Capitão-América:{"\n"}Primeiro Vingador
@@ -232,8 +227,7 @@ const Details = (props: Props) => {
         />
         <BuySeeDetails>Disponível em streaming</BuySeeDetails>
         <BuyIconSeeDetails
-          source={require("@assets/disney+.png")}
-          style={{ marginLeft: 104 }}
+          source={require("@assets/disney.png")}
         ></BuyIconSeeDetails>
 
         <RatingsSeeDetails>Crítica</RatingsSeeDetails>
@@ -243,7 +237,7 @@ const Details = (props: Props) => {
           color="orange"
           style={{
             marginTop: 420,
-            marginLeft: 30,
+            marginLeft: 36,
             position: "absolute",
             zIndex: 5,
           }}
@@ -254,7 +248,7 @@ const Details = (props: Props) => {
           color="orange"
           style={{
             marginTop: 420,
-            marginLeft: 60,
+            marginLeft: 66,
             position: "absolute",
             zIndex: 5,
           }}
@@ -265,7 +259,7 @@ const Details = (props: Props) => {
           color="orange"
           style={{
             marginTop: 420,
-            marginLeft: 90,
+            marginLeft: 96,
             position: "absolute",
             zIndex: 5,
           }}
@@ -276,7 +270,7 @@ const Details = (props: Props) => {
           color="orange"
           style={{
             marginTop: 420,
-            marginLeft: 120,
+            marginLeft: 126,
             position: "absolute",
             zIndex: 5,
           }}
@@ -287,7 +281,7 @@ const Details = (props: Props) => {
           color="gray"
           style={{
             marginTop: 420,
-            marginLeft: 150,
+            marginLeft: 156,
             position: "absolute",
             zIndex: 5,
           }}

@@ -110,7 +110,7 @@ position: relative;
 font-family: ${theme.FONT_FAMILY.AXIFORMA_BOLD};
 font-size: 20px;
 color: ${theme.COLORS.WHITE};
-margin-top: 110px;
+margin-top: 90px;
 align-self: flex-start;
 margin-left: 30px;
 
@@ -121,7 +121,7 @@ position: absolute;
 font-family: ${theme.FONT_FAMILY.AXIFORMA_BOLD};
 font-size: 16px;
 color: ${theme.COLORS.WHITE};
-margin-top: 150px;
+margin-top: 130px;
 align-self: flex-start;
 margin-left: 30px;
 z-index: 4;
@@ -153,7 +153,7 @@ z-index: 4;
 export const BuySeeDetails = styled.Text`
 position: absolute;
 font-size: 12px;
-margin-top: 270px;
+margin-top: 260px;
 align-self: flex-start;
 margin-left: 30px;
 font-family: ${theme.FONT_FAMILY.AXIFORMA_MEDIUM};
@@ -162,7 +162,7 @@ color: ${theme.COLORS.WHITE}
 
 export const BuyIconSeeDetails = styled.Image`
 position: absolute;
-margin-top: 300px;
+margin-top: 280px;
 margin-left: 20px;
 
 height: 80px;

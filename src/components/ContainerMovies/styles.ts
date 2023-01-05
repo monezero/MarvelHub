@@ -113,7 +113,7 @@ position: relative;
 font-family: ${theme.FONT_FAMILY.AXIFORMA_BOLD};
 font-size: 20px;
 color: ${theme.COLORS.WHITE};
-margin-top: 110px;
+margin-top: 90px;
 align-self: flex-start;
 margin-left: 30px;
 
@@ -124,7 +124,7 @@ position: absolute;
 font-family: ${theme.FONT_FAMILY.AXIFORMA_BOLD};
 font-size: 16px;
 color: ${theme.COLORS.WHITE};
-margin-top: 150px;
+margin-top: 130px;
 align-self: flex-start;
 margin-left: 30px;
 z-index: 4;
@@ -149,27 +149,27 @@ font-size: 16px;
 color: ${theme.COLORS.WHITE};
 margin-top: 390px;
 align-self: flex-start;
-margin-left: 30px;
+margin-left: 36px;
 z-index: 4;
 `
 
 export const BuySeeDetails = styled.Text`
 position: absolute;
 font-size: 12px;
-margin-top: 270px;
+margin-top: 290px;
+margin-left: 36px;
 align-self: flex-start;
-margin-left: 30px;
 font-family: ${theme.FONT_FAMILY.AXIFORMA_MEDIUM};
 color: ${theme.COLORS.WHITE}
 `;
 
 export const BuyIconSeeDetails = styled.Image`
 position: absolute;
-margin-top: 300px;
-margin-left: 20px;
-
-height: 80px;
-width: 80px;
+margin-top: 320px;
+margin-left: 36px;
+border-radius: 20px;
+height: 60px;
+width: 60px;
 
 `;
 
@@ -183,7 +183,7 @@ border-radius: 10px;
 border-width: 2px;
 border-color: ${theme.COLORS.RED};
 overflow: hidden;
-z-index: 9999;
+z-index: 5;
 background-color: ${theme.COLORS.BLACK};
 `;
  

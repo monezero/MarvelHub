@@ -3,11 +3,11 @@ import {
   Container,
   TextTitle,
   LogoMini,
-  ContainerMenu,
-  ContainerMenuVisual,
-  ImageMenu,
-  TextMenu,
   ContainerRight,
+  ContainerTop,
+  ContainerLeftTop,
+  ContainerRow,
+  ContainerCenter,
 } from "./styles";
 import { Menu } from "@components/Menu";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -32,13 +32,7 @@ export function AllComics() {
   const [isMenu, setIsMenu] = useState(false);
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
-      <View
-        style={{
-          marginTop: 10,
-          marginLeft: 20,
-          flexDirection: "row",
-        }}
-      >
+      <ContainerTop>
         <Ionicons
           name="menu"
           size={36}
@@ -58,21 +52,8 @@ export function AllComics() {
             onPress={() => setIsMenu(false)}
           />
         )}
-
-        <View
-          style={{
-            marginLeft: 250,
-            marginTop: 10,
-          }}
-        ></View>
-      </View>
-      <View
-        style={{
-          flexDirection: "row",
-          marginTop: 30,
-          marginLeft: 25,
-        }}
-      >
+      </ContainerTop>
+      <ContainerRow>
         <AntDesign
           name="arrowleft"
           size={30}
@@ -81,17 +62,11 @@ export function AllComics() {
         />
         <FontAwesome5 name="book-open" size={30} color="#f00" />
         <TextTitle>HQs</TextTitle>
-      </View>
+      </ContainerRow>
       <ComicsContainer />
-      <View
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          marginTop: 200,
-        }}
-      >
+      <ContainerCenter>
         <Entypo name="dots-three-horizontal" size={30} color="#f00" />
-      </View>
+      </ContainerCenter>
     </SafeAreaView>
   );
 }
