@@ -9,5 +9,7 @@
 * Ver mais + sorting
 
 Esse aplicativo foi feito com o intuito de aprender alguns elementos base da linguagem de programação. 
+
+
 ![marvelapp](https://user-images.githubusercontent.com/115902268/216216768-9255159f-ec4a-40e8-83b3-731a0dfb39a6.png)
 ![marvelapp2](https://user-images.githubusercontent.com/115902268/216217348-c692f8a5-1f3f-4de4-b746-7b04df5fc2eb.png)
