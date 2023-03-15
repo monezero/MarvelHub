@@ -1,4 +1,4 @@
-﻿# ProjetoMarvel
+﻿# MarvelHub
 
   Nesse aplicativo utilizei React Native com Typescript, para fazer os designs utilizei styled-components e algumas bibliotecas expo.
 
